@@ -1,0 +1,11 @@
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+eclipse.project.name = appName + '-core'
+
+dependencies {
+  api "com.badlogicgames.gdx:gdx:$gdxVersion"
+  api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+  implementation 'com.android.billingclient:billing:1.2'
+  implementation 'com.google.android.gms:play-services-games:16.0.0'
+  implementation 'com.google.android.gms:play-services-base:16.1.0'
+
+}

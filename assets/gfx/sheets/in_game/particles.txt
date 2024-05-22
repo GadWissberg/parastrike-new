@@ -1,0 +1,145 @@
+particles.png
+size: 494, 438
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+biohazard_smoke
+  rotate: false
+  xy: 4, 208
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+blast_horizontal_ring
+  rotate: false
+  xy: 4, 42
+  size: 120, 33
+  orig: 120, 33
+  offset: 0, 0
+  index: -1
+blast_ray
+  rotate: false
+  xy: 117, 4
+  size: 200, 20
+  orig: 200, 20
+  offset: 0, 0
+  index: -1
+blast_ring
+  rotate: false
+  xy: 316, 107
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+blood
+  rotate: false
+  xy: 323, 4
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+cartridge
+  rotate: false
+  xy: 4, 4
+  size: 5, 2
+  orig: 5, 2
+  offset: 0, 0
+  index: -1
+drop
+  rotate: false
+  xy: 25, 4
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+electricity0
+  rotate: false
+  xy: 4, 107
+  size: 150, 59
+  orig: 150, 59
+  offset: 0, 0
+  index: -1
+electricity1
+  rotate: false
+  xy: 340, 42
+  size: 150, 59
+  orig: 150, 59
+  offset: 0, 0
+  index: -1
+electricity2
+  rotate: false
+  xy: 160, 107
+  size: 150, 59
+  orig: 150, 59
+  offset: 0, 0
+  index: -1
+electricity3
+  rotate: false
+  xy: 184, 42
+  size: 150, 59
+  orig: 150, 59
+  offset: 0, 0
+  index: -1
+ellipse
+  rotate: false
+  xy: 349, 4
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+flake
+  rotate: false
+  xy: 15, 4
+  size: 4, 4
+  orig: 4, 4
+  offset: 0, 0
+  index: -1
+hemi_sphere
+  rotate: false
+  xy: 53, 4
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+lamp_light
+  rotate: false
+  xy: 387, 107
+  size: 66, 95
+  orig: 66, 95
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 216, 208
+  size: 228, 226
+  orig: 228, 226
+  offset: 0, 0
+  index: -1
+paratrooper_icon
+  rotate: false
+  xy: 110, 208
+  size: 100, 167
+  orig: 100, 167
+  offset: 0, 0
+  index: -1
+part
+  rotate: false
+  xy: 35, 4
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+smoke
+  rotate: false
+  xy: 130, 42
+  size: 48, 43
+  orig: 48, 43
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 91, 4
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,33 @@
+parts.png
+size: 40, 31
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+big_scout_part
+  rotate: false
+  xy: 0, 0
+  size: 32, 11
+  orig: 32, 11
+  offset: 0, 0
+  index: -1
+bodypart
+  rotate: false
+  xy: 0, 11
+  size: 15, 20
+  orig: 15, 20
+  offset: 0, 0
+  index: 0
+bodypart
+  rotate: false
+  xy: 15, 11
+  size: 15, 20
+  orig: 15, 20
+  offset: 0, 0
+  index: 1
+scout_part
+  rotate: false
+  xy: 30, 11
+  size: 10, 9
+  orig: 10, 9
+  offset: 0, 0
+  index: -1

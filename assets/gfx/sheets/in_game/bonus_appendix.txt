@@ -1,0 +1,19 @@
+bonus_appendix.png
+size: 128, 101
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+airstrikeplane
+  rotate: false
+  xy: 0, 0
+  size: 110, 23
+  orig: 110, 23
+  offset: 0, 0
+  index: -1
+white_flash
+  rotate: false
+  xy: 0, 25
+  size: 128, 76
+  orig: 128, 76
+  offset: 0, 0
+  index: -1

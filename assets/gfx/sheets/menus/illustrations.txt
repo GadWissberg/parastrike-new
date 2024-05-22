@@ -1,0 +1,61 @@
+illustrations.png
+size: 425, 621
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ill_blaster
+  rotate: false
+  xy: 1, 1
+  size: 211, 154
+  orig: 211, 154
+  offset: 0, 0
+  index: -1
+ill_cannon_ball
+  rotate: false
+  xy: 213, 1
+  size: 211, 154
+  orig: 211, 154
+  offset: 0, 0
+  index: -1
+ill_chain
+  rotate: false
+  xy: 1, 156
+  size: 211, 154
+  orig: 211, 154
+  offset: 0, 0
+  index: -1
+ill_homing
+  rotate: false
+  xy: 213, 156
+  size: 211, 154
+  orig: 211, 154
+  offset: 0, 0
+  index: -1
+ill_rocket
+  rotate: false
+  xy: 1, 311
+  size: 211, 154
+  orig: 211, 154
+  offset: 0, 0
+  index: -1
+ill_spread
+  rotate: false
+  xy: 213, 311
+  size: 211, 154
+  orig: 211, 154
+  offset: 0, 0
+  index: -1
+ill_tesla
+  rotate: false
+  xy: 1, 466
+  size: 211, 154
+  orig: 211, 154
+  offset: 0, 0
+  index: -1
+ill_twin
+  rotate: false
+  xy: 213, 466
+  size: 211, 154
+  orig: 211, 154
+  offset: 0, 0
+  index: -1

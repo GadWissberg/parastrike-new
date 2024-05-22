@@ -1,0 +1,75 @@
+hud.png
+size: 371, 477
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+alarm
+  rotate: false
+  xy: 2, 2
+  size: 1, 100
+  orig: 1, 100
+  offset: 0, 0
+  index: -1
+coins_icon
+  rotate: false
+  xy: 87, 2
+  size: 39, 39
+  orig: 39, 39
+  offset: 0, 0
+  index: -1
+crosshair_icon
+  rotate: false
+  xy: 46, 2
+  size: 39, 39
+  orig: 39, 39
+  offset: 0, 0
+  index: -1
+heat_gauge
+  rotate: false
+  xy: 268, 2
+  size: 101, 100
+  orig: 101, 100
+  offset: 0, 0
+  index: -1
+mini_hud
+  rotate: false
+  xy: 2, 350
+  size: 289, 125
+  orig: 289, 125
+  offset: 0, 0
+  index: -1
+needle
+  rotate: false
+  xy: 128, 2
+  size: 56, 6
+  orig: 56, 6
+  offset: 0, 0
+  index: -1
+score_icon
+  rotate: false
+  xy: 5, 2
+  size: 39, 39
+  orig: 39, 39
+  offset: 0, 0
+  index: -1
+tutorial_arrow
+  rotate: false
+  xy: 2, 115
+  size: 114, 65
+  orig: 114, 65
+  offset: 0, 0
+  index: -1
+tutorial_circle
+  rotate: false
+  xy: 118, 115
+  size: 240, 233
+  orig: 240, 233
+  offset: 0, 0
+  index: -1
+tutorial_point
+  rotate: false
+  xy: 186, 2
+  size: 80, 111
+  orig: 80, 111
+  offset: 0, 0
+  index: -1

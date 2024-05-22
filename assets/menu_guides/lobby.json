@@ -1,0 +1,25 @@
+{
+  "name": "lobby",
+  "tutors": [
+    {
+      "action": "MESSAGE",
+      "action_parameters": {
+        "message": "Welcome to your bunker management screen."
+      }
+    }
+  ],
+  "test": [
+    {
+      "action": "FOCUS",
+      "action_parameters": {
+        "message": "Click here to go to the shop for upgrading your bunker and side-kicks."
+      }
+    },
+    {
+      "action": "FOCUS",
+      "action_parameters": {
+        "message": "Click here to begin combat!"
+      }
+    }
+  ]
+}

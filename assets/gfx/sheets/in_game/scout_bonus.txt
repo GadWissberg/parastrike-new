@@ -1,0 +1,19 @@
+scout_bonus.png
+size: 162, 21
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+idle
+  rotate: false
+  xy: 0, 0
+  size: 81, 21
+  orig: 81, 21
+  offset: 0, 0
+  index: 0
+idle
+  rotate: false
+  xy: 81, 0
+  size: 81, 21
+  orig: 81, 21
+  offset: 0, 0
+  index: 1

@@ -1,0 +1,33 @@
+help_screen_2.png
+size: 800, 800
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+help
+  rotate: false
+  xy: 0, 0
+  size: 400, 357
+  orig: 400, 357
+  offset: 0, 0
+  index: 5
+help
+  rotate: false
+  xy: 400, 0
+  size: 400, 357
+  orig: 400, 357
+  offset: 0, 0
+  index: 6
+help
+  rotate: false
+  xy: 0, 357
+  size: 400, 357
+  orig: 400, 357
+  offset: 0, 0
+  index: 7
+help
+  rotate: false
+  xy: 400, 357
+  size: 400, 357
+  orig: 400, 357
+  offset: 0, 0
+  index: 8

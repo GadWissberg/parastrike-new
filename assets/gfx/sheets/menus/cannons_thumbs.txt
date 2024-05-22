@@ -1,0 +1,61 @@
+cannons_thumbs.png
+size: 596, 596
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blaster_thumb
+  rotate: false
+  xy: 0, 0
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+cannon_ball_thumb
+  rotate: false
+  xy: 298, 0
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+chaingun_thumb
+  rotate: false
+  xy: 0, 129
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+missile_thumb
+  rotate: false
+  xy: 298, 129
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+rocket_thumb
+  rotate: false
+  xy: 0, 258
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+shockwave_thumb
+  rotate: false
+  xy: 298, 258
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+spread_thumb
+  rotate: false
+  xy: 0, 387
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+twin_laser_thumb
+  rotate: false
+  xy: 298, 387
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1

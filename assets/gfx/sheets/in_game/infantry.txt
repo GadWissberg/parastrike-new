@@ -1,0 +1,124 @@
+infantry.png
+size: 128, 237
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+electrocute
+  rotate: false
+  xy: 0, 0
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 0
+electrocute
+  rotate: false
+  xy: 43, 0
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 1
+dying
+  rotate: false
+  xy: 0, 34
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 0
+dying
+  rotate: false
+  xy: 44, 34
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 1
+dying
+  rotate: false
+  xy: 0, 68
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 2
+dying
+  rotate: false
+  xy: 44, 68
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 3
+dying
+  rotate: false
+  xy: 0, 102
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 4
+dying
+  rotate: false
+  xy: 44, 102
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 5
+facing_left
+  rotate: false
+  xy: 0, 136
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: -1
+facing_right
+  rotate: false
+  xy: 43, 136
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: -1
+falling
+  rotate: false
+  xy: 86, 136
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 0
+falling
+  rotate: false
+  xy: 0, 170
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 1
+shoot_left
+  rotate: false
+  xy: 43, 170
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 0
+shoot_left
+  rotate: false
+  xy: 86, 170
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 1
+shoot_right
+  rotate: false
+  xy: 0, 204
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 0
+shoot_right
+  rotate: false
+  xy: 43, 204
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 1
+sink
+  rotate: false
+  xy: 86, 204
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: -1

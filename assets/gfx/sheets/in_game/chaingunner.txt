@@ -1,0 +1,124 @@
+chaingunner.png
+size: 231, 135
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dying
+  rotate: false
+  xy: 0, 0
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 0
+dying
+  rotate: false
+  xy: 44, 0
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 1
+dying
+  rotate: false
+  xy: 88, 0
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 2
+dying
+  rotate: false
+  xy: 132, 0
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 3
+dying
+  rotate: false
+  xy: 176, 0
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 4
+dying
+  rotate: false
+  xy: 0, 34
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 5
+facing_left
+  rotate: false
+  xy: 44, 34
+  size: 57, 33
+  orig: 57, 33
+  offset: 0, 0
+  index: -1
+facing_right
+  rotate: false
+  xy: 102, 34
+  size: 57, 33
+  orig: 57, 33
+  offset: 0, 0
+  index: -1
+falling
+  rotate: false
+  xy: 160, 34
+  size: 57, 33
+  orig: 57, 33
+  offset: 0, 0
+  index: 0
+falling
+  rotate: false
+  xy: 0, 68
+  size: 57, 33
+  orig: 57, 33
+  offset: 0, 0
+  index: 1
+shoot_left
+  rotate: false
+  xy: 58, 68
+  size: 57, 33
+  orig: 57, 33
+  offset: 0, 0
+  index: 0
+shoot_left
+  rotate: false
+  xy: 116, 68
+  size: 57, 33
+  orig: 57, 33
+  offset: 0, 0
+  index: 1
+shoot_right
+  rotate: false
+  xy: 174, 68
+  size: 57, 33
+  orig: 57, 33
+  offset: 0, 0
+  index: 0
+shoot_right
+  rotate: false
+  xy: 0, 102
+  size: 57, 33
+  orig: 57, 33
+  offset: 0, 0
+  index: 1
+sink
+  rotate: false
+  xy: 58, 102
+  size: 57, 33
+  orig: 57, 33
+  offset: 0, 0
+  index: -1
+electrocute
+  rotate: false
+  xy: 116, 102
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 0
+electrocute
+  rotate: false
+  xy: 159, 102
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 1

@@ -1,0 +1,180 @@
+shop_menu.png
+size: 962, 484
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+armor_icon
+  rotate: false
+  xy: 206, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+armory_button
+  rotate: false
+  xy: 2, 369
+  size: 281, 113
+  orig: 281, 113
+  offset: 0, 0
+  index: -1
+armory_button_pressed
+  rotate: false
+  xy: 398, 254
+  size: 279, 113
+  orig: 279, 113
+  offset: 0, 0
+  index: -1
+armory_button_selected
+  rotate: false
+  xy: 285, 369
+  size: 281, 113
+  orig: 281, 113
+  offset: 0, 0
+  index: -1
+bullet_icon
+  rotate: false
+  xy: 258, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+cannons_button
+  rotate: false
+  xy: 568, 369
+  size: 281, 113
+  orig: 281, 113
+  offset: 0, 0
+  index: -1
+cannons_button_pressed
+  rotate: false
+  xy: 646, 139
+  size: 279, 113
+  orig: 279, 113
+  offset: 0, 0
+  index: -1
+cannons_button_selected
+  rotate: false
+  xy: 363, 139
+  size: 281, 113
+  orig: 281, 113
+  offset: 0, 0
+  index: -1
+close_button
+  rotate: false
+  xy: 856, 61
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+close_button_pressed
+  rotate: false
+  xy: 2, 139
+  size: 76, 76
+  orig: 76, 76
+  offset: 0, 0
+  index: -1
+empty_cell
+  rotate: false
+  xy: 2, 2
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+error_icon
+  rotate: false
+  xy: 283, 254
+  size: 113, 113
+  orig: 113, 113
+  offset: 0, 0
+  index: -1
+fist_icon
+  rotate: false
+  xy: 154, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+full_cell
+  rotate: false
+  xy: 25, 2
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
+  index: -1
+gears_icon
+  rotate: false
+  xy: 102, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+plus_button
+  rotate: false
+  xy: 853, 2
+  size: 57, 57
+  orig: 57, 57
+  offset: 0, 0
+  index: -1
+plus_button_pressed
+  rotate: false
+  xy: 552, 2
+  size: 57, 57
+  orig: 57, 57
+  offset: 0, 0
+  index: -1
+purchase_button
+  rotate: false
+  xy: 2, 61
+  size: 425, 74
+  orig: 425, 74
+  offset: 0, 0
+  index: -1
+purchase_button_pressed
+  rotate: false
+  xy: 429, 61
+  size: 425, 74
+  orig: 425, 74
+  offset: 0, 0
+  index: -1
+sidekick_button
+  rotate: false
+  xy: 679, 254
+  size: 281, 113
+  orig: 281, 113
+  offset: 0, 0
+  index: -1
+sidekick_button_pressed
+  rotate: false
+  xy: 2, 254
+  size: 279, 113
+  orig: 279, 113
+  offset: 0, 0
+  index: -1
+sidekick_button_selected
+  rotate: false
+  xy: 80, 139
+  size: 281, 113
+  orig: 281, 113
+  offset: 0, 0
+  index: -1
+timer_icon
+  rotate: false
+  xy: 50, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+upgrade_button
+  rotate: false
+  xy: 310, 2
+  size: 240, 57
+  orig: 240, 57
+  offset: 0, 0
+  index: -1
+upgrade_button_pressed
+  rotate: false
+  xy: 611, 2
+  size: 240, 57
+  orig: 240, 57
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,46 @@
+heat_turret.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bullet
+  rotate: false
+  xy: 2, 2
+  size: 1, 4
+  orig: 1, 4
+  offset: 0, 0
+  index: -1
+idle
+  rotate: false
+  xy: 2, 224
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: -1
+dead
+  rotate: false
+  xy: 2, 296
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: -1
+shoot
+  rotate: false
+  xy: 2, 152
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: 0
+shoot
+  rotate: false
+  xy: 2, 8
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: 1
+shoot
+  rotate: false
+  xy: 2, 80
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: 2

@@ -1,0 +1,138 @@
+{
+  "allowed_bonuses": [
+    "FIX"
+  ],
+  "name": "Level 4",
+  "allowed_paratroopers": [
+    "INFANTRY"
+  ],
+  "scene": {
+    "name": "MILITARY_ZONE",
+    "ornaments": [
+      {
+        "ornament": "FAR_PLANE",
+        "moving": true
+      },
+      {
+        "ornament": "FENCE",
+        "x": -1
+      },
+      {
+        "ornament": "LAMP",
+        "x": 750
+      },
+      {
+        "ornament": "CABIN",
+        "x": 800
+      }
+    ]
+  },
+  "weather": "RAIN",
+  "sky": "NIGHT",
+  "music": "BATTLE_1",
+  "enemies": [
+    {
+      "type": "SCOUT",
+      "timing": 5
+    },
+    {
+      "type": "SCOUT",
+      "timing": 6,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 8,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 13,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 18
+    },
+    {
+      "type": "SCOUT",
+      "timing": 23,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 27
+    },
+    {
+      "type": "OSPREY",
+      "timing": 27
+    },
+    {
+      "type": "OSPREY",
+      "timing": 31
+    },
+    {
+      "type": "OSPREY",
+      "timing": 33,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 34,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 35
+    },
+    {
+      "type": "OSPREY",
+      "timing": 45,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 49
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 51
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 53
+    },
+    {
+      "type": "OSPREY",
+      "timing": 55
+    },
+    {
+      "type": "OSPREY",
+      "timing": 59
+    },
+    {
+      "type": "SCOUT",
+      "timing": 60,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 61,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 65
+    },
+    {
+      "type": "OSPREY",
+      "timing": 70,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 75,
+      "minimum_skill": "HARD"
+    }
+  ]
+}

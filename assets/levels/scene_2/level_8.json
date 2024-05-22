@@ -1,0 +1,254 @@
+{
+  "allowed_bonuses": [
+    "FIX",
+    "MONEY",
+    "GAS_BOMB",
+    "AMMO"
+  ],
+  "name": "Level 8",
+  "allowed_paratroopers": [
+    "INFANTRY"
+  ],
+  "scene": {
+    "name": "ARCTIC",
+    "ornaments": [
+      {
+        "ornament": "SNOWY_TREE",
+        "x": 800
+      },
+      {
+        "ornament": "SNOWY_CABIN",
+        "x": 150
+      },
+      {
+        "ornament": "SNOW_MAN",
+        "x": 1000
+      },
+      {
+        "ornament": "PENGUIN",
+        "moving": true
+      }
+    ]
+  },
+  "music": "BATTLE_3",
+  "weather": "SNOW",
+  "enemies": [
+    {
+      "type": "APC",
+      "timing": 3
+    },
+    {
+      "type": "OSPREY",
+      "timing": 4,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APC",
+      "timing": 5,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 6
+    },
+    {
+      "type": "APC",
+      "timing": 9
+    },
+    {
+      "type": "OSPREY",
+      "timing": 12
+    },
+    {
+      "type": "APC",
+      "timing": 15
+    },
+    {
+      "type": "SCOUT",
+      "timing": 18
+    },
+    {
+      "type": "SCOUT",
+      "timing": 21
+    },
+    {
+      "type": "OSPREY",
+      "timing": 22,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APC",
+      "timing": 24
+    },
+    {
+      "type": "OSPREY",
+      "timing": 27
+    },
+    {
+      "type": "OSPREY",
+      "timing": 30
+    },
+    {
+      "type": "APC",
+      "timing": 33
+    },
+    {
+      "type": "OSPREY",
+      "timing": 34,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 36
+    },
+    {
+      "type": "SCOUT",
+      "timing": 39
+    },
+    {
+      "type": "SCOUT",
+      "timing": 42
+    },
+    {
+      "type": "OSPREY",
+      "timing": 43,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APC",
+      "timing": 45
+    },
+    {
+      "type": "OSPREY",
+      "timing": 48
+    },
+    {
+      "type": "OSPREY",
+      "timing": 51
+    },
+    {
+      "type": "OSPREY",
+      "timing": 54
+    },
+    {
+      "type": "APC",
+      "timing": 57
+    },
+    {
+      "type": "SCOUT",
+      "timing": 60
+    },
+    {
+      "type": "SCOUT",
+      "timing": 63
+    },
+    {
+      "type": "OSPREY",
+      "timing": 64,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APC",
+      "timing": 65,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 66
+    },
+    {
+      "type": "SCOUT",
+      "timing": 69
+    },
+    {
+      "type": "APC",
+      "timing": 72,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "APC",
+      "timing": 72,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 75,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 75,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APC",
+      "timing": 76,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 78,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 78,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APC",
+      "timing": 79,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 81,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 84,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 87,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 90,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "APC",
+      "timing": 91,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 93,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 96,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 100,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 105,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APC",
+      "timing": 110,
+      "minimum_skill": "HARD"
+    }
+  ]
+}

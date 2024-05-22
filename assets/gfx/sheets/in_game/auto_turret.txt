@@ -1,0 +1,39 @@
+auto_turret.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+idle
+  rotate: false
+  xy: 2, 2
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: -1
+dead
+  rotate: false
+  xy: 2, 64
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 126
+  size: 59, 9
+  orig: 59, 9
+  offset: 0, 0
+  index: -1
+shoot
+  rotate: false
+  xy: 2, 137
+  size: 59, 9
+  orig: 59, 9
+  offset: 0, 0
+  index: 0
+shoot
+  rotate: false
+  xy: 2, 148
+  size: 59, 9
+  orig: 59, 9
+  offset: 0, 0
+  index: 1

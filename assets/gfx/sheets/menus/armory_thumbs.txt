@@ -1,0 +1,33 @@
+armory_thumbs.png
+size: 298, 516
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+air_strike_thumb
+  rotate: false
+  xy: 0, 0
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+atom_thumb
+  rotate: false
+  xy: 0, 129
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+bio_thumb
+  rotate: false
+  xy: 0, 258
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+bunker_thumb
+  rotate: false
+  xy: 0, 387
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1

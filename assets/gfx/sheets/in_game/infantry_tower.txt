@@ -1,0 +1,46 @@
+infantry_tower.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+idle
+  rotate: false
+  xy: 2, 2
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: -1
+dead
+  rotate: false
+  xy: 54, 2
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: -1
+shoot_left
+  rotate: false
+  xy: 106, 2
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: 0
+shoot_left
+  rotate: false
+  xy: 158, 2
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: 1
+shoot_right
+  rotate: false
+  xy: 210, 2
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: 0
+shoot_right
+  rotate: false
+  xy: 262, 2
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: 1

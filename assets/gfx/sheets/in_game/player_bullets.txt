@@ -1,0 +1,82 @@
+player_bullets.png
+size: 102, 62
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+auto_turret_bullet
+  rotate: false
+  xy: 2, 2
+  size: 28, 2
+  orig: 28, 2
+  offset: 0, 0
+  index: -1
+homing_missile
+  rotate: false
+  xy: 32, 2
+  size: 25, 5
+  orig: 25, 5
+  offset: 0, 0
+  index: -1
+small_split_bullet
+  rotate: false
+  xy: 59, 2
+  size: 14, 9
+  orig: 14, 9
+  offset: 0, 0
+  index: -1
+rapid_laser
+  rotate: false
+  xy: 75, 2
+  size: 25, 6
+  orig: 25, 6
+  offset: 0, 0
+  index: -1
+rocket
+  rotate: false
+  xy: 2, 13
+  size: 23, 7
+  orig: 23, 7
+  offset: 0, 0
+  index: -1
+chain_gun_bullet
+  rotate: false
+  xy: 27, 13
+  size: 22, 8
+  orig: 22, 8
+  offset: 0, 0
+  index: -1
+triple_cannon_ball
+  rotate: false
+  xy: 51, 13
+  size: 20, 13
+  orig: 20, 13
+  offset: 0, 0
+  index: -1
+cannon_ball
+  rotate: false
+  xy: 73, 13
+  size: 22, 15
+  orig: 22, 15
+  offset: 0, 0
+  index: -1
+split_bullet
+  rotate: false
+  xy: 2, 30
+  size: 28, 18
+  orig: 28, 18
+  offset: 0, 0
+  index: -1
+flame_bullet
+  rotate: false
+  xy: 32, 30
+  size: 28, 18
+  orig: 28, 18
+  offset: 0, 0
+  index: -1
+homing_plasma
+  rotate: false
+  xy: 62, 30
+  size: 36, 30
+  orig: 36, 30
+  offset: 0, 0
+  index: -1

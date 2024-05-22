@@ -1,0 +1,110 @@
+yak.png
+size: 255, 445
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ballistic
+  rotate: false
+  xy: 0, 0
+  size: 56, 16
+  orig: 56, 16
+  offset: 0, 0
+  index: -1
+falling_down
+  rotate: false
+  xy: 56, 0
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+falling_down_right
+  rotate: false
+  xy: 141, 0
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+falling_right
+  rotate: false
+  xy: 0, 89
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+falling_up
+  rotate: false
+  xy: 85, 89
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+falling_up_right
+  rotate: false
+  xy: 170, 89
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+idle_down
+  rotate: false
+  xy: 0, 178
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+idle_down_right
+  rotate: false
+  xy: 85, 178
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+idle_right
+  rotate: false
+  xy: 170, 178
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+idle_up
+  rotate: false
+  xy: 0, 267
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+idle_up_right
+  rotate: false
+  xy: 85, 267
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+shoot_down
+  rotate: false
+  xy: 170, 267
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: 0
+shoot_down
+  rotate: false
+  xy: 0, 356
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: 1
+shoot_down_right
+  rotate: false
+  xy: 85, 356
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: 0
+shoot_down_right
+  rotate: false
+  xy: 170, 356
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: 1

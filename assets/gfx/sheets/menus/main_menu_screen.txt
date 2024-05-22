@@ -1,0 +1,47 @@
+main_menu_screen.png
+size: 688, 571
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+main_help_button
+  rotate: false
+  xy: 0, 0
+  size: 342, 142
+  orig: 342, 142
+  offset: 0, 0
+  index: -1
+main_help_button_pressed
+  rotate: false
+  xy: 343, 0
+  size: 342, 142
+  orig: 342, 142
+  offset: 0, 0
+  index: -1
+main_options_button
+  rotate: false
+  xy: 0, 143
+  size: 342, 142
+  orig: 342, 142
+  offset: 0, 0
+  index: -1
+main_options_button_pressed
+  rotate: false
+  xy: 343, 143
+  size: 342, 142
+  orig: 342, 142
+  offset: 0, 0
+  index: -1
+play_button
+  rotate: false
+  xy: 0, 286
+  size: 688, 142
+  orig: 688, 142
+  offset: 0, 0
+  index: -1
+play_button_pressed
+  rotate: false
+  xy: 0, 429
+  size: 688, 142
+  orig: 688, 142
+  offset: 0, 0
+  index: -1

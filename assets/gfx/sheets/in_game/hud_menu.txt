@@ -1,0 +1,47 @@
+hud_menu.png
+size: 404, 395
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+edge
+  rotate: false
+  xy: 138, 2
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+help_ingame
+  rotate: false
+  xy: 2, 36
+  size: 400, 357
+  orig: 400, 357
+  offset: 0, 0
+  index: -1
+holder
+  rotate: false
+  xy: 104, 2
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+horizontal
+  rotate: false
+  xy: 70, 2
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+inside
+  rotate: false
+  xy: 2, 2
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+vertical
+  rotate: false
+  xy: 36, 2
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

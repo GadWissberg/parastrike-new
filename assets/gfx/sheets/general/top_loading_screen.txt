@@ -1,0 +1,19 @@
+top_loading_screen.png
+size: 640, 768
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+top_left_loading
+  rotate: false
+  xy: 0, 0
+  size: 640, 384
+  orig: 640, 384
+  offset: 0, 0
+  index: -1
+top_right_loading
+  rotate: false
+  xy: 0, 384
+  size: 640, 384
+  orig: 640, 384
+  offset: 0, 0
+  index: -1

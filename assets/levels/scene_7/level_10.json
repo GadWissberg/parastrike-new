@@ -1,0 +1,670 @@
+{
+  "name": "Level 10",
+  "scene": {
+    "name": "FOREST",
+    "ornaments": [
+      {
+        "ornament": "DEER",
+        "moving": true
+      },
+      {
+        "ornament": "FAR_PLANE",
+        "moving": true
+      },
+      {
+        "ornament": "BIRD",
+        "moving": true
+      }
+    ]
+  },
+  "sky": "NIGHT",
+  "allowed_bonuses": true,
+  "allowed_paratroopers": [
+    "INFANTRY",
+    "CHAINGUNNER",
+    "BAZOOKA_GUY"
+  ],
+  "ambience_sounds": [
+    "AMB_CRICKETS",
+    "AMB_OWL",
+    "AMB_DISTANT_SHOOTINGS",
+    "AMB_DISTANT_EXP"
+  ],
+  "music": "BATTLE_3",
+  "enemies": [
+    {
+      "type": "ZEPPELIN",
+      "timing": 3,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 3,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 4,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 4,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "YAK",
+      "timing": 5,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 6,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 6,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "YAK",
+      "timing": 7,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "YAK",
+      "timing": 8,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 9,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 9,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 12
+    },
+    {
+      "type": "YAK",
+      "timing": 13,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "YAK",
+      "timing": 13,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 15
+    },
+    {
+      "type": "YAK",
+      "timing": 18
+    },
+    {
+      "type": "TANK",
+      "timing": 21
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 24
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 27
+    },
+    {
+      "type": "SCOUT",
+      "timing": 30,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 30,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 31,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 31,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 32,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "YAK",
+      "timing": 33
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 34,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 35,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 36
+    },
+    {
+      "type": "TANK",
+      "timing": 39
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 42,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "YAK",
+      "timing": 45
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 48
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 51
+    },
+    {
+      "type": "YAK",
+      "timing": 54
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 57,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 58,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APACHE",
+      "timing": 58,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "YAK",
+      "timing": 60,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 63,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "APACHE",
+      "timing": 64,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "APACHE",
+      "timing": 65,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "TANK",
+      "timing": 66,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APACHE",
+      "timing": 67,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 69,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 72,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 75
+    },
+    {
+      "type": "OSPREY",
+      "timing": 78
+    },
+    {
+      "type": "YAK",
+      "timing": 81
+    },
+    {
+      "type": "BONUS_SCOUT",
+      "timing": 82,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 84
+    },
+    {
+      "type": "APC",
+      "timing": 87
+    },
+    {
+      "type": "SCOUT",
+      "timing": 90
+    },
+    {
+      "type": "BONUS_SCOUT",
+      "timing": 93
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 96
+    },
+    {
+      "type": "APC",
+      "timing": 99
+    },
+    {
+      "type": "TANK",
+      "timing": 102
+    },
+    {
+      "type": "OSPREY",
+      "timing": 103,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 105
+    },
+    {
+      "type": "SCOUT",
+      "timing": 108
+    },
+    {
+      "type": "BONUS_SCOUT",
+      "timing": 109,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "BONUS_SCOUT",
+      "timing": 110,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 111
+    },
+    {
+      "type": "BONUS_SCOUT",
+      "timing": 112,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 114
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 117
+    },
+    {
+      "type": "SCOUT",
+      "timing": 120
+    },
+    {
+      "type": "OSPREY",
+      "timing": 123,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 126,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APC",
+      "timing": 127,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APC",
+      "timing": 129,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "APC",
+      "timing": 132,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "APC",
+      "timing": 135
+    },
+    {
+      "type": "OSPREY",
+      "timing": 138
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 142
+    },
+    {
+      "type": "OSPREY",
+      "timing": 145
+    },
+    {
+      "type": "OSPREY",
+      "timing": 146,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 147,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 148,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 149,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "TANK",
+      "timing": 151
+    },
+    {
+      "type": "SCOUT",
+      "timing": 152,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 154,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 157,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 160,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 162,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 163,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 163,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APC",
+      "timing": 163,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APC",
+      "timing": 163,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 164,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APACHE",
+      "timing": 166,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 166,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APC",
+      "timing": 167,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "APC",
+      "timing": 168,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "YAK",
+      "timing": 169
+    },
+    {
+      "type": "APC",
+      "timing": 170,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "APC",
+      "timing": 172
+    },
+    {
+      "type": "OSPREY",
+      "timing": 175
+    },
+    {
+      "type": "APC",
+      "timing": 176
+    },
+    {
+      "type": "YAK",
+      "timing": 178
+    },
+    {
+      "type": "APC",
+      "timing": 179
+    },
+    {
+      "type": "YAK",
+      "timing": 180,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 181
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 184
+    },
+    {
+      "type": "OSPREY",
+      "timing": 187
+    },
+    {
+      "type": "APC",
+      "timing": 190
+    },
+    {
+      "type": "OSPREY",
+      "timing": 193
+    },
+    {
+      "type": "SCOUT",
+      "timing": 194,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 195,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 196
+    },
+    {
+      "type": "SCOUT",
+      "timing": 197,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "APC",
+      "timing": 199,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "TANK",
+      "timing": 202,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 203,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 205,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 208
+    },
+    {
+      "type": "OSPREY",
+      "timing": 211,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 214,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "YAK",
+      "timing": 217
+    },
+    {
+      "type": "BALLISTIC",
+      "timing": 220
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 223
+    },
+    {
+      "type": "APACHE",
+      "timing": 224,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "YAK",
+      "timing": 226
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 229,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 232,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APC",
+      "timing": 235
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 236,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 237,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 238
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 239,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "TANK",
+      "timing": 241
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 245
+    },
+    {
+      "type": "OSPREY",
+      "timing": 250,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 255,
+      "minimum_skill": "HARD",
+      "alignment": "LEFT"
+    },
+    {
+      "type": "ZEPPELIN",
+      "timing": 255,
+      "minimum_skill": "HARD",
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APC",
+      "timing": 255,
+      "minimum_skill": "HARD",
+      "alignment": "LEFT"
+    },
+    {
+      "type": "APC",
+      "timing": 255,
+      "minimum_skill": "HARD",
+      "alignment": "RIGHT"
+    }
+  ]
+}

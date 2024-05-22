@@ -1,0 +1,61 @@
+help_screen.png
+size: 981, 981
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+help
+  rotate: false
+  xy: 0, 0
+  size: 400, 357
+  orig: 400, 357
+  offset: 0, 0
+  index: 1
+help
+  rotate: false
+  xy: 400, 0
+  size: 400, 357
+  orig: 400, 357
+  offset: 0, 0
+  index: 2
+help
+  rotate: false
+  xy: 0, 357
+  size: 400, 357
+  orig: 400, 357
+  offset: 0, 0
+  index: 3
+help
+  rotate: false
+  xy: 400, 357
+  size: 400, 357
+  orig: 400, 357
+  offset: 0, 0
+  index: 4
+libgdx
+  rotate: false
+  xy: 0, 714
+  size: 373, 62
+  orig: 373, 62
+  offset: 0, 0
+  index: -1
+profile
+  rotate: false
+  xy: 373, 714
+  size: 226, 226
+  orig: 226, 226
+  offset: 0, 0
+  index: -1
+tutorial_button
+  rotate: false
+  xy: 599, 714
+  size: 191, 98
+  orig: 191, 98
+  offset: 0, 0
+  index: -1
+tutorial_button_pressed
+  rotate: false
+  xy: 790, 714
+  size: 191, 98
+  orig: 191, 98
+  offset: 0, 0
+  index: -1

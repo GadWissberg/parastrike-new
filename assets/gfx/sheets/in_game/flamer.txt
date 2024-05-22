@@ -1,0 +1,32 @@
+flamer.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shoot
+  rotate: false
+  xy: 2, 2
+  size: 74, 19
+  orig: 74, 19
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 23
+  size: 74, 19
+  orig: 74, 19
+  offset: 0, 0
+  index: -1
+dead
+  rotate: false
+  xy: 2, 44
+  size: 58, 59
+  orig: 58, 59
+  offset: 0, 0
+  index: -1
+idle
+  rotate: false
+  xy: 62, 44
+  size: 58, 59
+  orig: 58, 59
+  offset: 0, 0
+  index: -1

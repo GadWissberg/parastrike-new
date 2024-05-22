@@ -1,0 +1,33 @@
+bottom_loading_screen.png
+size: 640, 988
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bottom_left_loading
+  rotate: false
+  xy: 0, 220
+  size: 640, 384
+  orig: 640, 384
+  offset: 0, 0
+  index: -1
+bottom_right_loading
+  rotate: false
+  xy: 0, 604
+  size: 640, 384
+  orig: 640, 384
+  offset: 0, 0
+  index: -1
+gadarts
+  rotate: false
+  xy: 0, 0
+  size: 134, 59
+  orig: 134, 59
+  offset: 0, 0
+  index: -1
+loading_screen
+  rotate: false
+  xy: 134, 0
+  size: 346, 220
+  orig: 346, 220
+  offset: 0, 0
+  index: -1

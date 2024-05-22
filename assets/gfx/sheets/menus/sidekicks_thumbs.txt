@@ -1,0 +1,54 @@
+sidekicks_thumbs.png
+size: 900, 393
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+auto_thumb
+  rotate: false
+  xy: 1, 1
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+dome_thumb
+  rotate: false
+  xy: 301, 1
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+flamer_thumb
+  rotate: false
+  xy: 601, 1
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+heat_thumb
+  rotate: false
+  xy: 1, 132
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+phantom_thumb
+  rotate: false
+  xy: 301, 132
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+tesla_thumb
+  rotate: false
+  xy: 601, 132
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1
+watch_thumb
+  rotate: false
+  xy: 1, 263
+  size: 298, 129
+  orig: 298, 129
+  offset: 0, 0
+  index: -1

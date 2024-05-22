@@ -1,0 +1,475 @@
+{
+  "allowed_bonuses": [
+    "FIX",
+    "MONEY",
+    "GAS_BOMB",
+    "AMMO",
+    "AIR_STRIKE",
+    "SUPER_FIX",
+    "ATOM_BOMB",
+    "CANNON_UPGRADE",
+    "BUNKER_UPGRADE"
+  ],
+  "name": "Level 9",
+  "allowed_paratroopers": [
+    "INFANTRY",
+    "CHAINGUNNER",
+    "BAZOOKA_GUY"
+  ],
+  "scene": {
+    "landscape": 1,
+    "name": "CITY",
+    "ornaments": [
+      {
+        "ornament": "FENCE",
+        "x": -1
+      },
+      {
+        "ornament": "LAMP",
+        "x": 84
+      },
+      {
+        "ornament": "LAMP",
+        "x": 284
+      },
+      {
+        "ornament": "LAMP",
+        "x": 484
+      },
+      {
+        "ornament": "LAMP",
+        "x": 750
+      },
+      {
+        "ornament": "LAMP",
+        "x": 950
+      },
+      {
+        "ornament": "LAMP",
+        "x": 1150
+      },
+      {
+        "ornament": "TRUCK",
+        "moving": true
+      },
+      {
+        "ornament": "POLICE",
+        "moving": true
+      }
+    ]
+  },
+  "sky": "NIGHT",
+  "ambience_sounds": [
+    "AMB_DISTANT_SHOOTINGS",
+    "AMB_CAR_ALARM"
+  ],
+  "weather": "RAIN",
+  "music": "BATTLE_1",
+  "enemies": [
+    {
+      "type": "APACHE",
+      "timing": 3
+    },
+    {
+      "type": "SCOUT",
+      "timing": 4,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 5,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APACHE",
+      "timing": 6
+    },
+    {
+      "type": "OSPREY",
+      "timing": 7,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "APACHE",
+      "timing": 9
+    },
+    {
+      "type": "SCOUT",
+      "timing": 12
+    },
+    {
+      "type": "SCOUT",
+      "timing": 15
+    },
+    {
+      "type": "SCOUT",
+      "timing": 18
+    },
+    {
+      "type": "SCOUT",
+      "timing": 21
+    },
+    {
+      "type": "OSPREY",
+      "timing": 24
+    },
+    {
+      "type": "OSPREY",
+      "timing": 27
+    },
+    {
+      "type": "OSPREY",
+      "timing": 30
+    },
+    {
+      "type": "OSPREY",
+      "timing": 33
+    },
+    {
+      "type": "YAK",
+      "timing": 36
+    },
+    {
+      "type": "OSPREY",
+      "timing": 37,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 38,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "YAK",
+      "timing": 39
+    },
+    {
+      "type": "YAK",
+      "timing": 39
+    },
+    {
+      "type": "YAK",
+      "timing": 42
+    },
+    {
+      "type": "APC",
+      "timing": 43,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 45
+    },
+    {
+      "type": "SCOUT",
+      "timing": 48
+    },
+    {
+      "type": "SCOUT",
+      "timing": 51
+    },
+    {
+      "type": "SCOUT",
+      "timing": 54
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 57
+    },
+    {
+      "type": "APC",
+      "timing": 57,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "APC",
+      "timing": 57,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 58,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 59,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "YAK",
+      "timing": 60
+    },
+    {
+      "type": "APC",
+      "timing": 60,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "APC",
+      "timing": 60,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APACHE",
+      "timing": 63
+    },
+    {
+      "type": "APC",
+      "timing": 63,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "APC",
+      "timing": 63,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "YAK",
+      "timing": 64,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 66,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 69,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 72,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 75,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "APACHE",
+      "timing": 76,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APACHE",
+      "timing": 77,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 78,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 81,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 82,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 84,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 87,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 90,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 93,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 96,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 99,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "APACHE",
+      "timing": 102
+    },
+    {
+      "type": "APACHE",
+      "timing": 102
+    },
+    {
+      "type": "SCOUT",
+      "timing": 103,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 104,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APC",
+      "timing": 105
+    },
+    {
+      "type": "APC",
+      "timing": 108
+    },
+    {
+      "type": "APC",
+      "timing": 111
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 112,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 114
+    },
+    {
+      "type": "SCOUT",
+      "timing": 117
+    },
+    {
+      "type": "SCOUT",
+      "timing": 120
+    },
+    {
+      "type": "SCOUT",
+      "timing": 123
+    },
+    {
+      "type": "SCOUT",
+      "timing": 126
+    },
+    {
+      "type": "SCOUT",
+      "timing": 129
+    },
+    {
+      "type": "OSPREY",
+      "timing": 132
+    },
+    {
+      "type": "OSPREY",
+      "timing": 135
+    },
+    {
+      "type": "APC",
+      "timing": 136,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APC",
+      "timing": 137,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 138
+    },
+    {
+      "type": "OSPREY",
+      "timing": 141
+    },
+    {
+      "type": "OSPREY",
+      "timing": 144
+    },
+    {
+      "type": "OSPREY",
+      "timing": 147
+    },
+    {
+      "type": "APACHE",
+      "timing": 150
+    },
+    {
+      "type": "SCOUT",
+      "timing": 151,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "APACHE",
+      "timing": 153
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 156
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 159
+    },
+    {
+      "type": "OSPREY",
+      "timing": 162
+    },
+    {
+      "type": "APC",
+      "timing": 165
+    },
+    {
+      "type": "YAK",
+      "timing": 166,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "YAK",
+      "timing": 167,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 168
+    },
+    {
+      "type": "BONUS_SCOUT",
+      "timing": 171
+    },
+    {
+      "type": "YAK",
+      "timing": 174
+    },
+    {
+      "type": "OSPREY",
+      "timing": 175,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "APC",
+      "timing": 177
+    },
+    {
+      "type": "YAK",
+      "timing": 180
+    },
+    {
+      "type": "SUPER_YAK",
+      "timing": 185,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "APC",
+      "timing": 190,
+      "minimum_skill": "HARD"
+    }
+  ]
+}

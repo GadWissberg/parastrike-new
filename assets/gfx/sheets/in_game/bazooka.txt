@@ -1,0 +1,138 @@
+bazooka.png
+size: 117, 237
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+electrocute
+  rotate: false
+  xy: 0, 0
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 1
+shoot_left
+  rotate: false
+  xy: 43, 0
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: 2
+shoot_left
+  rotate: false
+  xy: 80, 0
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: 0
+shoot_left
+  rotate: false
+  xy: 0, 34
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: 1
+shoot_right
+  rotate: false
+  xy: 37, 34
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: 0
+shoot_right
+  rotate: false
+  xy: 74, 34
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: 1
+electrocute
+  rotate: false
+  xy: 0, 68
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: 0
+shoot_right
+  rotate: false
+  xy: 43, 68
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: 2
+sink
+  rotate: false
+  xy: 80, 68
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: -1
+falling
+  rotate: false
+  xy: 0, 102
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: 1
+falling
+  rotate: false
+  xy: 37, 102
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: 0
+dying
+  rotate: false
+  xy: 74, 102
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 2
+dying
+  rotate: false
+  xy: 0, 136
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 0
+dying
+  rotate: false
+  xy: 44, 136
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 1
+dying
+  rotate: false
+  xy: 0, 170
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 3
+dying
+  rotate: false
+  xy: 44, 170
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 4
+facing_right
+  rotate: false
+  xy: 0, 204
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: -1
+dying
+  rotate: false
+  xy: 37, 204
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: 5
+facing_left
+  rotate: false
+  xy: 81, 204
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: -1

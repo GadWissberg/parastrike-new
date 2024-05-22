@@ -1,0 +1,131 @@
+welcome_buttons.png
+size: 803, 803
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rate_blank_star
+  rotate: false
+  xy: 1, 1
+  size: 116, 110
+  orig: 116, 110
+  offset: 0, 0
+  index: -1
+rate_full_star
+  rotate: false
+  xy: 118, 1
+  size: 116, 110
+  orig: 116, 110
+  offset: 0, 0
+  index: -1
+rate_google
+  rotate: false
+  xy: 1, 589
+  size: 310, 106
+  orig: 310, 106
+  offset: 0, 0
+  index: -1
+rate_google_pressed
+  rotate: false
+  xy: 312, 589
+  size: 310, 106
+  orig: 310, 106
+  offset: 0, 0
+  index: -1
+rate_submit
+  rotate: false
+  xy: 1, 696
+  size: 310, 106
+  orig: 310, 106
+  offset: 0, 0
+  index: -1
+rate_submit_pressed
+  rotate: false
+  xy: 312, 696
+  size: 310, 106
+  orig: 310, 106
+  offset: 0, 0
+  index: -1
+welcome_facebook
+  rotate: false
+  xy: 1, 393
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_facebook_pressed
+  rotate: false
+  xy: 303, 393
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_highscores
+  rotate: false
+  xy: 454, 393
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_highscores_pressed
+  rotate: false
+  xy: 605, 197
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_rate
+  rotate: false
+  xy: 454, 197
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_rate_pressed
+  rotate: false
+  xy: 386, 1
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_sound_off
+  rotate: false
+  xy: 235, 1
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_sound_off_pressed
+  rotate: false
+  xy: 537, 1
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_sound_on
+  rotate: false
+  xy: 1, 197
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_sound_on_pressed
+  rotate: false
+  xy: 152, 197
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_website
+  rotate: false
+  xy: 303, 197
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+welcome_website_pressed
+  rotate: false
+  xy: 152, 393
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1

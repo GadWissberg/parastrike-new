@@ -1,0 +1,194 @@
+options_buttons.png
+size: 740, 740
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+options_cloudload
+  rotate: false
+  xy: 0, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_cloudload_disabled
+  rotate: false
+  xy: 114, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_cloudload_pressed
+  rotate: false
+  xy: 228, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_cloudsave
+  rotate: false
+  xy: 342, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_cloudsave_checked
+  rotate: false
+  xy: 456, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_cloudsave_disabled
+  rotate: false
+  xy: 570, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_cloudsave_pressed
+  rotate: false
+  xy: 0, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_epilepsy
+  rotate: false
+  xy: 114, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_epilepsy_checked
+  rotate: false
+  xy: 228, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_epilepsy_pressed
+  rotate: false
+  xy: 342, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_google_games
+  rotate: false
+  xy: 456, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_google_games_checked
+  rotate: false
+  xy: 570, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_google_games_pressed
+  rotate: false
+  xy: 0, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_messages
+  rotate: false
+  xy: 114, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_messages_checked
+  rotate: false
+  xy: 228, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_messages_pressed
+  rotate: false
+  xy: 342, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_restart
+  rotate: false
+  xy: 456, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_restart_pressed
+  rotate: false
+  xy: 570, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_swipe
+  rotate: false
+  xy: 0, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_swipe_checked
+  rotate: false
+  xy: 114, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_swipe_pressed
+  rotate: false
+  xy: 228, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_touch
+  rotate: false
+  xy: 342, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_touch_checked
+  rotate: false
+  xy: 456, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_touch_pressed
+  rotate: false
+  xy: 570, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_vibration
+  rotate: false
+  xy: 0, 592
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_vibration_checked
+  rotate: false
+  xy: 114, 592
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+options_vibration_pressed
+  rotate: false
+  xy: 228, 592
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1

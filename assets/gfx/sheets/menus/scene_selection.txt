@@ -1,0 +1,40 @@
+scene_selection.png
+size: 303, 303
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+empty_star_level
+  rotate: false
+  xy: 1, 1
+  size: 41, 39
+  orig: 41, 39
+  offset: 0, 0
+  index: -1
+level_button
+  rotate: false
+  xy: 43, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+level_button_pressed
+  rotate: false
+  xy: 1, 152
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+star_level
+  rotate: false
+  xy: 152, 152
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+warning_sign
+  rotate: false
+  xy: 192, 152
+  size: 66, 66
+  orig: 66, 66
+  offset: 0, 0
+  index: -1

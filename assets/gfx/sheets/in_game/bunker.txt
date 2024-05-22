@@ -1,0 +1,54 @@
+bunker.png
+size: 121, 450
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dead
+  rotate: false
+  xy: 0, 0
+  size: 100, 59
+  orig: 100, 59
+  offset: 0, 0
+  index: -1
+idle
+  rotate: false
+  xy: 0, 63
+  size: 100, 59
+  orig: 100, 59
+  offset: 0, 0
+  index: -1
+bunker_shield
+  rotate: false
+  xy: 0, 126
+  size: 121, 72
+  orig: 121, 72
+  offset: 0, 0
+  index: -1
+shoot_left
+  rotate: false
+  xy: 0, 202
+  size: 100, 59
+  orig: 100, 59
+  offset: 0, 0
+  index: 0
+shoot_left
+  rotate: false
+  xy: 0, 265
+  size: 100, 59
+  orig: 100, 59
+  offset: 0, 0
+  index: 1
+shoot_right
+  rotate: false
+  xy: 0, 328
+  size: 100, 59
+  orig: 100, 59
+  offset: 0, 0
+  index: 0
+shoot_right
+  rotate: false
+  xy: 0, 391
+  size: 100, 59
+  orig: 100, 59
+  offset: 0, 0
+  index: 1

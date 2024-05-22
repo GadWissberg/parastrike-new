@@ -1,0 +1,39 @@
+beam_turret.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bullet
+  rotate: false
+  xy: 2, 2
+  size: 1, 5
+  orig: 1, 5
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 5, 2
+  size: 83, 21
+  orig: 83, 21
+  offset: 0, 0
+  index: -1
+shoot
+  rotate: false
+  xy: 2, 25
+  size: 83, 21
+  orig: 83, 21
+  offset: 0, 0
+  index: -1
+dead
+  rotate: false
+  xy: 87, 25
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+idle
+  rotate: false
+  xy: 128, 25
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1

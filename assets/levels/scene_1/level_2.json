@@ -1,0 +1,125 @@
+{
+  "allowed_bonuses": [
+    "FIX"
+  ],
+  "name": "Level 2",
+  "allowed_paratroopers": [
+    "INFANTRY"
+  ],
+  "weather": "RAIN",
+  "music": "BATTLE_2",
+  "scene": {
+    "name": "MILITARY_ZONE",
+    "ornaments": [
+      {
+        "ornament": "BIRD",
+        "moving": true
+      },
+      {
+        "ornament": "FAR_PLANE",
+        "moving": true
+      },
+      {
+        "ornament": "TENT",
+        "x": 86
+      },
+      {
+        "ornament": "TENT",
+        "x": 394
+      },
+      {
+        "ornament": "TENT",
+        "x": 857
+      }
+    ]
+  },
+  "enemies": [
+    {
+      "type": "OSPREY",
+      "timing": 3
+    },
+    {
+      "type": "OSPREY",
+      "timing": 5,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 8
+    },
+    {
+      "type": "SCOUT",
+      "timing": 13
+    },
+    {
+      "type": "OSPREY",
+      "timing": 18,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 23,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 23,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 25,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 28
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 32,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 32,
+      "minimum_skill": "MEDIUM",
+      "alignment": "LEFT"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 38
+    },
+    {
+      "type": "SCOUT",
+      "timing": 43
+    },
+    {
+      "type": "SCOUT",
+      "timing": 45,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 48
+    },
+    {
+      "type": "OSPREY",
+      "timing": 53
+    },
+    {
+      "type": "OSPREY",
+      "timing": 60
+    },
+    {
+      "type": "SCOUT",
+      "timing": 65,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 70,
+      "minimum_skill": "HARD"
+    }
+  ]
+}

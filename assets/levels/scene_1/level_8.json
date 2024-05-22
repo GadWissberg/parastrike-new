@@ -1,0 +1,184 @@
+{
+  "allowed_bonuses": [
+    "FIX",
+    "MONEY"
+  ],
+  "name": "Level 8",
+  "allowed_paratroopers": [
+    "INFANTRY"
+  ],
+  "scene": {
+    "name": "MILITARY_ZONE",
+    "ornaments": [
+      {
+        "ornament": "FAR_PLANE",
+        "moving": true
+      },
+      {
+        "ornament": "FENCE",
+        "x": -1
+      },
+      {
+        "ornament": "CONTAINERS",
+        "x": 80
+      },
+      {
+        "ornament": "LAMP",
+        "x": 84
+      },
+      {
+        "ornament": "LAMP",
+        "x": 284
+      },
+      {
+        "ornament": "LAMP",
+        "x": 484
+      },
+      {
+        "ornament": "LAMP",
+        "x": 750
+      },
+      {
+        "ornament": "LAMP",
+        "x": 950
+      },
+      {
+        "ornament": "LAMP",
+        "x": 1150
+      },
+      {
+        "ornament": "TENT",
+        "x": 750
+      }
+    ]
+  },
+  "weather": "REGULAR",
+  "sky": "NIGHT",
+  "ambience_sounds":["AMB_CRICKETS"],
+  "music": "BATTLE_2",
+  "enemies": [
+    {
+      "type": "OSPREY",
+      "timing": 3
+    },
+    {
+      "type": "SCOUT",
+      "timing": 4,
+      "minimum_skill": "HARD",
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 5,
+      "minimum_skill": "MEDIUM",
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 5,
+      "minimum_skill": "MEDIUM",
+      "alignment": "LEFT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 7,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 11,
+      "alignment": "LEFT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 15
+    },
+    {
+      "type": "OSPREY",
+      "timing": 19
+    },
+    {
+      "type": "SCOUT",
+      "timing": 21,
+      "minimum_skill": "HARD",
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 23
+    },
+    {
+      "type": "OSPREY",
+      "timing": 33
+    },
+    {
+      "type": "SCOUT",
+      "timing": 35,
+      "minimum_skill": "MEDIUM",
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 38
+    },
+    {
+      "type": "OSPREY",
+      "timing": 40
+    },
+    {
+      "type": "SCOUT",
+      "timing": 44
+    },
+    {
+      "type": "OSPREY",
+      "timing": 46,
+      "minimum_skill": "HARD",
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 48,
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 53
+    },
+    {
+      "type": "SCOUT",
+      "timing": 57
+    },
+    {
+      "type": "SCOUT",
+      "timing": 60,
+      "minimum_skill": "MEDIUM",
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 69
+    },
+    {
+      "type": "OSPREY",
+      "timing": 75
+    },
+    {
+      "type": "SCOUT",
+      "timing": 77,
+      "minimum_skill": "HARD",
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 80,
+      "minimum_skill": "MEDIUM",
+      "alignment": "RIGHT"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 85,
+      "minimum_skill": "HARD",
+      "alignment": "RIGHT"
+    }
+  ]
+}

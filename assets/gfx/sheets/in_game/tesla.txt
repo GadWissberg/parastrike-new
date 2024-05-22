@@ -1,0 +1,53 @@
+tesla.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shoot
+  rotate: false
+  xy: 2, 2
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: 2
+shoot
+  rotate: false
+  xy: 64, 2
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: 1
+shoot
+  rotate: false
+  xy: 126, 2
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: 0
+idle
+  rotate: false
+  xy: 188, 2
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: -1
+shoot
+  rotate: false
+  xy: 250, 2
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: 3
+dead
+  rotate: false
+  xy: 312, 2
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: -1
+electricity
+  rotate: false
+  xy: 2, 74
+  size: 150, 30
+  orig: 150, 30
+  offset: 0, 0
+  index: -1

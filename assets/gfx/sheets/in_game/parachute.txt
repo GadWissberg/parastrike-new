@@ -1,0 +1,96 @@
+parachute.png
+size: 1014, 62
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+parachute
+  rotate: false
+  xy: 0, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: -1
+parachute_dead
+  rotate: false
+  xy: 78, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 0
+parachute_dead
+  rotate: false
+  xy: 156, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 1
+parachute_dead
+  rotate: false
+  xy: 234, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 2
+parachute_dead
+  rotate: false
+  xy: 312, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 3
+parachute_lands
+  rotate: false
+  xy: 390, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 0
+parachute_lands
+  rotate: false
+  xy: 468, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 1
+parachute_lands
+  rotate: false
+  xy: 546, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 2
+parachute_lands
+  rotate: false
+  xy: 624, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 3
+parachute_lands
+  rotate: false
+  xy: 702, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 4
+parachute_opens
+  rotate: false
+  xy: 780, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 0
+parachute_opens
+  rotate: false
+  xy: 858, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 1
+parachute_opens
+  rotate: false
+  xy: 936, 0
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: 2

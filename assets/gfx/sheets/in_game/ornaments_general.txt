@@ -1,0 +1,292 @@
+ornaments_general.png
+size: 554, 554
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bird
+  rotate: false
+  xy: 93, 2
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: 0
+bird
+  rotate: false
+  xy: 110, 2
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: 1
+bird
+  rotate: false
+  xy: 127, 2
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: 2
+bird
+  rotate: false
+  xy: 144, 2
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: 3
+boat
+  rotate: false
+  xy: 181, 77
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+cabin
+  rotate: false
+  xy: 2, 150
+  size: 79, 72
+  orig: 79, 72
+  offset: 0, 0
+  index: -1
+camel
+  rotate: false
+  xy: 86, 34
+  size: 53, 35
+  orig: 53, 35
+  offset: 0, 0
+  index: 0
+camel
+  rotate: false
+  xy: 141, 34
+  size: 53, 35
+  orig: 53, 35
+  offset: 0, 0
+  index: 1
+camel
+  rotate: false
+  xy: 251, 34
+  size: 53, 35
+  orig: 53, 35
+  offset: 0, 0
+  index: 2
+camel
+  rotate: false
+  xy: 196, 34
+  size: 53, 35
+  orig: 53, 35
+  offset: 0, 0
+  index: 3
+containers
+  rotate: false
+  xy: 145, 251
+  size: 179, 203
+  orig: 179, 203
+  offset: 0, 0
+  index: -1
+cow
+  rotate: false
+  xy: 161, 2
+  size: 31, 18
+  orig: 31, 18
+  offset: 0, 0
+  index: -1
+dead_tree_first
+  rotate: false
+  xy: 428, 150
+  size: 77, 99
+  orig: 77, 99
+  offset: 0, 0
+  index: -1
+dead_tree_second
+  rotate: false
+  xy: 2, 251
+  size: 66, 109
+  orig: 66, 109
+  offset: 0, 0
+  index: -1
+deer
+  rotate: false
+  xy: 378, 2
+  size: 30, 26
+  orig: 30, 26
+  offset: 0, 0
+  index: 0
+deer
+  rotate: false
+  xy: 346, 2
+  size: 30, 26
+  orig: 30, 26
+  offset: 0, 0
+  index: 1
+deer
+  rotate: false
+  xy: 314, 2
+  size: 30, 26
+  orig: 30, 26
+  offset: 0, 0
+  index: 2
+deer
+  rotate: false
+  xy: 282, 2
+  size: 30, 26
+  orig: 30, 26
+  offset: 0, 0
+  index: 3
+far_plane
+  rotate: false
+  xy: 2, 2
+  size: 29, 9
+  orig: 29, 9
+  offset: 0, 0
+  index: -1
+fence
+  rotate: false
+  xy: 212, 150
+  size: 80, 75
+  orig: 80, 75
+  offset: 0, 0
+  index: -1
+lamp
+  rotate: false
+  xy: 398, 150
+  size: 28, 94
+  orig: 28, 94
+  offset: 0, 0
+  index: -1
+meadow_tree
+  rotate: false
+  xy: 129, 77
+  size: 50, 53
+  orig: 50, 53
+  offset: 0, 0
+  index: -1
+meadow_tree_second
+  rotate: false
+  xy: 283, 77
+  size: 58, 61
+  orig: 58, 61
+  offset: 0, 0
+  index: -1
+palm_tree
+  rotate: false
+  xy: 294, 150
+  size: 102, 94
+  orig: 102, 94
+  offset: 0, 0
+  index: -1
+parasol
+  rotate: false
+  xy: 306, 34
+  size: 48, 38
+  orig: 48, 38
+  offset: 0, 0
+  index: -1
+penguin
+  rotate: false
+  xy: 194, 2
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: 0
+penguin
+  rotate: false
+  xy: 216, 2
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: 1
+penguin
+  rotate: false
+  xy: 260, 2
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: 2
+penguin
+  rotate: false
+  xy: 238, 2
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: 3
+police
+  rotate: false
+  xy: 2, 34
+  size: 82, 30
+  orig: 82, 30
+  offset: 0, 0
+  index: 0
+police
+  rotate: false
+  xy: 410, 2
+  size: 82, 30
+  orig: 82, 30
+  offset: 0, 0
+  index: 1
+satellite
+  rotate: false
+  xy: 326, 251
+  size: 226, 270
+  orig: 226, 270
+  offset: 0, 0
+  index: -1
+sheep
+  rotate: false
+  xy: 73, 2
+  size: 18, 13
+  orig: 18, 13
+  offset: 0, 0
+  index: 0
+sheep
+  rotate: false
+  xy: 53, 2
+  size: 18, 13
+  orig: 18, 13
+  offset: 0, 0
+  index: 1
+sheep
+  rotate: false
+  xy: 33, 2
+  size: 18, 13
+  orig: 18, 13
+  offset: 0, 0
+  index: 2
+snow_man
+  rotate: false
+  xy: 229, 77
+  size: 52, 59
+  orig: 52, 59
+  offset: 0, 0
+  index: -1
+snowy_cabin
+  rotate: false
+  xy: 83, 150
+  size: 127, 74
+  orig: 127, 74
+  offset: 0, 0
+  index: -1
+snowy_tree
+  rotate: false
+  xy: 70, 251
+  size: 73, 117
+  orig: 73, 117
+  offset: 0, 0
+  index: -1
+tent
+  rotate: false
+  xy: 343, 77
+  size: 169, 71
+  orig: 169, 71
+  offset: 0, 0
+  index: -1
+truck
+  rotate: false
+  xy: 356, 34
+  size: 125, 41
+  orig: 125, 41
+  offset: 0, 0
+  index: 0
+truck
+  rotate: false
+  xy: 2, 77
+  size: 125, 41
+  orig: 125, 41
+  offset: 0, 0
+  index: 1

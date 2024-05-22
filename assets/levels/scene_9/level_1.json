@@ -1,0 +1,64 @@
+{
+  "name": "BOSS",
+  "scene": {
+    "name": "MILITARY_ZONE",
+    "landscape": -1,
+    "ornaments": [
+      {
+        "ornament": "FENCE",
+        "x": -1
+      },
+      {
+        "ornament": "LAMP",
+        "x": 84
+      },
+      {
+        "ornament": "LAMP",
+        "x": 284
+      },
+      {
+        "ornament": "LAMP",
+        "x": 484
+      },
+      {
+        "ornament": "LAMP",
+        "x": 750
+      },
+      {
+        "ornament": "LAMP",
+        "x": 950
+      },
+      {
+        "ornament": "LAMP",
+        "x": 1150
+      }
+    ]
+  },
+  "allowed_bonuses": true,
+  "allowed_paratroopers": [
+    "INFANTRY",
+    "CHAINGUNNER",
+    "BAZOOKA_GUY"
+  ],
+  "ambience_sounds": [
+    "AMB_WIND"
+  ],
+  "sky": "NIGHT",
+  "music": "BOSS",
+  "enemies": [
+    {
+      "type": "BOSS",
+      "timing": 3
+    }
+  ],
+  "events": [
+    {
+      "timing": "0",
+      "action": "TOUCH_LOCK"
+    },
+    {
+      "timing": "10",
+      "action": "TOUCH_UNLOCK"
+    }
+  ]
+}

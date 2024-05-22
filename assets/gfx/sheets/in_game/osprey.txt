@@ -1,0 +1,26 @@
+osprey.png
+size: 321, 44
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+falling
+  rotate: false
+  xy: 0, 0
+  size: 107, 44
+  orig: 107, 44
+  offset: 0, 0
+  index: -1
+idle
+  rotate: false
+  xy: 107, 0
+  size: 107, 44
+  orig: 107, 44
+  offset: 0, 0
+  index: 0
+idle
+  rotate: false
+  xy: 214, 0
+  size: 107, 44
+  orig: 107, 44
+  offset: 0, 0
+  index: 1

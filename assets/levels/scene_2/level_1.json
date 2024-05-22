@@ -1,0 +1,127 @@
+{
+  "allowed_bonuses": [
+    "FIX",
+    "MONEY",
+    "GAS_BOMB"
+  ],
+  "name": "Level 1",
+  "allowed_paratroopers": [
+    "INFANTRY"
+  ],
+  "scene": {
+    "name": "ARCTIC"
+  },
+  "music": "BATTLE_4",
+  "weather": "REGULAR",
+  "enemies": [
+    {
+      "type": "SCOUT",
+      "alignment": "LEFT",
+      "timing": 3
+    },
+    {
+      "type": "OSPREY",
+      "minimum_skill": "HARD",
+      "alignment": "LEFT",
+      "timing": 4
+    },
+    {
+      "type": "APC",
+      "minimum_skill": "MEDIUM",
+      "alignment": "LEFT",
+      "timing": 6
+    },
+    {
+      "type": "OSPREY",
+      "alignment": "RIGHT",
+      "timing": 13
+    },
+    {
+      "alignment": "RANDOM",
+      "type": "APC",
+      "timing": 23
+    },
+    {
+      "type": "OSPREY",
+      "timing": 33
+    },
+    {
+      "type": "SCOUT",
+      "minimum_skill": "HARD",
+      "alignment": "LEFT",
+      "timing": 35
+    },
+    {
+      "type": "SCOUT",
+      "timing": 38
+    },
+    {
+      "type": "OSPREY",
+      "minimum_skill": "MEDIUM",
+      "alignment": "LEFT",
+      "timing": 41
+    },
+    {
+      "type": "OSPREY",
+      "timing": 43
+    },
+    {
+      "type": "SCOUT",
+      "timing": 48
+    },
+    {
+      "type": "APC",
+      "minimum_skill": "HARD",
+      "alignment": "LEFT",
+      "timing": 50
+    },
+    {
+      "type": "APC",
+      "timing": 53
+    },
+    {
+      "type": "OSPREY",
+      "timing": 67
+    },
+    {
+      "type": "SCOUT",
+      "minimum_skill": "MEDIUM",
+      "alignment": "LEFT",
+      "timing": 70
+    },
+    {
+      "type": "SCOUT",
+      "timing": 74
+    },
+    {
+      "type": "OSPREY",
+      "timing": 77
+    },
+    {
+      "type": "SCOUT",
+      "minimum_skill": "HARD",
+      "alignment": "LEFT",
+      "timing": 78
+    },
+    {
+      "type": "SCOUT",
+      "timing": 80
+    },
+    {
+      "type": "OSPREY",
+      "timing": 85
+    },
+    {
+      "type": "OSPREY",
+      "minimum_skill": "MEDIUM",
+      "alignment": "LEFT",
+      "timing": 88
+    },
+    {
+      "type": "OSPREY",
+      "minimum_skill": "HARD",
+      "alignment": "LEFT",
+      "timing": 91
+    }
+  ]
+}

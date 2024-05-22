@@ -1,0 +1,124 @@
+{
+  "allowed_bonuses": false,
+  "force_simple_cannon_ball": true,
+  "allow_gain": false,
+  "completion_key": false,
+  "allow_feats": false,
+  "show_statistics": false,
+  "opening_message": "Welcome!",
+  "show_options_button": "tutorial_complete",
+  "show_bombs_button": false,
+  "play_good_luck_taunt": false,
+  "level_complete_message": "Good Job!",
+  "name": "Tutorial",
+  "allowed_paratroopers": [
+    "INFANTRY"
+  ],
+  "music": "TUTORIAL",
+  "weather": "REGULAR",
+  "events": [
+    {
+      "timing": "0",
+      "action": "TOUCH_LOCK"
+    },
+    {
+      "timing": "5",
+      "action": "FOCUS",
+      "action_parameters": {
+        "target": "PLAYER",
+        "message": "This is you."
+      }
+    },
+    {
+      "timing": "9",
+      "action": "TOUCH_UNLOCK"
+    },
+    {
+      "timing": "16",
+      "action": "TOUCH_LOCK"
+    },
+    {
+      "timing": "24",
+      "action": "FOCUS",
+      "action_parameters": {
+        "target": "PARATROOPER",
+        "message": "Shoot down paratroopers before they land.",
+        "show_finger": true
+      }
+    },
+    {
+      "timing": "23",
+      "action": "TOUCH_UNLOCK"
+    },
+    {
+      "timing": "30",
+      "action": "ANIMATION",
+      "action_parameters": {
+        "start_x": 1000,
+        "start_y": 25,
+        "end_x": 100,
+        "end_y": 25,
+        "message": "You can also swipe the ground to aim and shoot."
+      }
+    },
+    {
+      "timing": "45",
+      "action": "MESSAGE",
+      "action_parameters": {
+        "message": "Every kill gives you score and money!"
+      }
+    },
+    {
+      "timing": "55",
+      "action": "MESSAGE",
+      "action_parameters": {
+        "message": "Your main objective is to destroy all enemies!"
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "type": "BASIC_SCOUT",
+      "alignment": "RIGHT",
+      "focus": {
+        "delay": 4,
+        "message": "Your enemy. Touch it to shoot it down.",
+        "show_finger": true
+      },
+      "timing": 5
+    },
+    {
+      "type": "SCOUT",
+      "alignment": "RIGHT",
+      "timing": 17
+    },
+    {
+      "type": "SCOUT",
+      "timing": 25
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 30
+    },
+    {
+      "type": "SCOUT",
+      "timing": 35
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 40
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 45
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 50
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 50
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+bonuses_2.png
+size: 600, 600
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ammo
+  rotate: false
+  xy: 0, 0
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1
+fix
+  rotate: false
+  xy: 300, 0
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1
+super_fix
+  rotate: false
+  xy: 0, 298
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1

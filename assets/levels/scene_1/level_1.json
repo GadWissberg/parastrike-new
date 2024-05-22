@@ -1,0 +1,101 @@
+{
+  "allowed_bonuses": [
+    "FIX"
+  ],
+  "name": "Level 1",
+  "allowed_paratroopers": [
+    "INFANTRY"
+  ],
+  "scene": {
+    "name": "MILITARY_ZONE",
+    "ornaments": [
+      {
+        "ornament": "BIRD",
+        "moving": true
+      },
+      {
+        "ornament": "FAR_PLANE",
+        "moving": true
+      }
+    ]
+  },
+  "music": "BATTLE_1",
+  "weather": "REGULAR",
+  "sky": "DAY",
+  "enemies": [
+    {
+      "type": "BASIC_SCOUT",
+      "alignment": "LEFT",
+      "timing": 3
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "alignment": "RIGHT",
+      "timing": 13
+    },
+    {
+      "alignment": "RANDOM",
+      "type": "OSPREY",
+      "timing": 23
+    },
+    {
+      "type": "OSPREY",
+      "timing": 28,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 30,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 33
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 38
+    },
+    {
+      "type": "SCOUT",
+      "timing": 40,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 43
+    },
+    {
+      "type": "OSPREY",
+      "timing": 45,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "OSPREY",
+      "timing": 48
+    },
+    {
+      "type": "SCOUT",
+      "timing": 50,
+      "minimum_skill": "HARD"
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 53
+    },
+    {
+      "type": "BASIC_SCOUT",
+      "timing": 60
+    },
+    {
+      "type": "OSPREY",
+      "timing": 67,
+      "minimum_skill": "MEDIUM"
+    },
+    {
+      "type": "SCOUT",
+      "timing": 74,
+      "minimum_skill": "HARD"
+    }
+  ]
+}

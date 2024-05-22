@@ -1,0 +1,229 @@
+ingame_buttons.png
+size: 1024, 1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+button_airstrike
+  rotate: false
+  xy: 0, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_airstrike_closed
+  rotate: false
+  xy: 114, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_airstrike_pressed
+  rotate: false
+  xy: 228, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_atom
+  rotate: false
+  xy: 342, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_atom_closed
+  rotate: false
+  xy: 456, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_atom_pressed
+  rotate: false
+  xy: 570, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_biohazard
+  rotate: false
+  xy: 684, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_biohazard_closed
+  rotate: false
+  xy: 798, 0
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_biohazard_pressed
+  rotate: false
+  xy: 0, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_bombs
+  rotate: false
+  xy: 114, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_bombs_checked
+  rotate: false
+  xy: 228, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_bombs_closed
+  rotate: false
+  xy: 342, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_bombs_pressed
+  rotate: false
+  xy: 456, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_cancel
+  rotate: false
+  xy: 570, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_cancel_pressed
+  rotate: false
+  xy: 684, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_check
+  rotate: false
+  xy: 798, 148
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_check_pressed
+  rotate: false
+  xy: 0, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_exit
+  rotate: false
+  xy: 114, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_exit_pressed
+  rotate: false
+  xy: 228, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_help
+  rotate: false
+  xy: 342, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_help_pressed
+  rotate: false
+  xy: 456, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_options
+  rotate: false
+  xy: 570, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_options_checked
+  rotate: false
+  xy: 684, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_options_pressed
+  rotate: false
+  xy: 798, 296
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_share
+  rotate: false
+  xy: 0, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_share_pressed
+  rotate: false
+  xy: 114, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_speaker_off
+  rotate: false
+  xy: 228, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_speaker_off_pressed
+  rotate: false
+  xy: 342, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_speaker_on
+  rotate: false
+  xy: 456, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+button_speaker_on_pressed
+  rotate: false
+  xy: 570, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+ingame_button_highlight
+  rotate: false
+  xy: 684, 444
+  size: 114, 148
+  orig: 114, 148
+  offset: 0, 0
+  index: -1
+ingame_button_indicator
+  rotate: false
+  xy: 798, 444
+  size: 57, 67
+  orig: 57, 67
+  offset: 0, 0
+  index: -1

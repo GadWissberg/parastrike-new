@@ -1,0 +1,68 @@
+bonuses.png
+size: 900, 894
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+airstrike
+  rotate: false
+  xy: 0, 0
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1
+atom
+  rotate: false
+  xy: 300, 0
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1
+bunker_upgrade
+  rotate: false
+  xy: 600, 0
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1
+cannon_upgrade
+  rotate: false
+  xy: 0, 298
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1
+dollar
+  rotate: false
+  xy: 300, 298
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1
+dollar_bag
+  rotate: false
+  xy: 600, 298
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1
+gas
+  rotate: false
+  xy: 0, 596
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1
+shield
+  rotate: false
+  xy: 300, 596
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1
+sidekick_upgrade
+  rotate: false
+  xy: 600, 596
+  size: 300, 298
+  orig: 300, 298
+  offset: 0, 0
+  index: -1

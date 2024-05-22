@@ -1,0 +1,145 @@
+turrets.png
+size: 216, 218
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cannon_ball_idle
+  rotate: false
+  xy: 2, 2
+  size: 65, 10
+  orig: 65, 10
+  offset: 0, 0
+  index: -1
+cannon_ball_shoot
+  rotate: false
+  xy: 69, 2
+  size: 65, 10
+  orig: 65, 10
+  offset: 0, 0
+  index: -1
+chain_gun_idle
+  rotate: false
+  xy: 75, 27
+  size: 74, 25
+  orig: 74, 25
+  offset: 0, 0
+  index: -1
+chain_gun_shoot
+  rotate: false
+  xy: 2, 81
+  size: 74, 25
+  orig: 74, 25
+  offset: 0, 0
+  index: 0
+chain_gun_shoot
+  rotate: false
+  xy: 78, 81
+  size: 74, 25
+  orig: 74, 25
+  offset: 0, 0
+  index: 1
+missle_launcher_idle
+  rotate: false
+  xy: 154, 81
+  size: 60, 25
+  orig: 60, 25
+  offset: 0, 0
+  index: -1
+missle_launcher_shoot
+  rotate: false
+  xy: 126, 108
+  size: 60, 25
+  orig: 60, 25
+  offset: 0, 0
+  index: 0
+missle_launcher_shoot
+  rotate: false
+  xy: 64, 108
+  size: 60, 25
+  orig: 60, 25
+  offset: 0, 0
+  index: 1
+missle_launcher_shoot
+  rotate: false
+  xy: 2, 108
+  size: 60, 25
+  orig: 60, 25
+  offset: 0, 0
+  index: 2
+rocket_launcher_idle
+  rotate: false
+  xy: 136, 2
+  size: 71, 23
+  orig: 71, 23
+  offset: 0, 0
+  index: -1
+rocket_launcher_shoot
+  rotate: false
+  xy: 2, 27
+  size: 71, 23
+  orig: 71, 23
+  offset: 0, 0
+  index: -1
+shock_wave_idle
+  rotate: false
+  xy: 2, 135
+  size: 65, 26
+  orig: 65, 26
+  offset: 0, 0
+  index: -1
+shock_wave_shoot
+  rotate: false
+  xy: 69, 135
+  size: 65, 26
+  orig: 65, 26
+  offset: 0, 0
+  index: -1
+split_laser_idle
+  rotate: false
+  xy: 136, 135
+  size: 72, 33
+  orig: 72, 33
+  offset: 0, 0
+  index: -1
+split_laser_shoot
+  rotate: false
+  xy: 2, 170
+  size: 72, 33
+  orig: 72, 33
+  offset: 0, 0
+  index: -1
+triple_cannon_idle
+  rotate: false
+  xy: 76, 170
+  size: 66, 46
+  orig: 66, 46
+  offset: 0, 0
+  index: -1
+triple_cannon_shoot
+  rotate: false
+  xy: 144, 170
+  size: 66, 46
+  orig: 66, 46
+  offset: 0, 0
+  index: -1
+twin_turret_idle
+  rotate: false
+  xy: 136, 54
+  size: 65, 25
+  orig: 65, 25
+  offset: 0, 0
+  index: -1
+twin_turret_shoot
+  rotate: false
+  xy: 69, 54
+  size: 65, 25
+  orig: 65, 25
+  offset: 0, 0
+  index: 0
+twin_turret_shoot
+  rotate: false
+  xy: 2, 54
+  size: 65, 25
+  orig: 65, 25
+  offset: 0, 0
+  index: 1

@@ -1,0 +1,19 @@
+apc.png
+size: 216, 44
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+idle
+  rotate: false
+  xy: 0, 0
+  size: 108, 44
+  orig: 108, 44
+  offset: 0, 0
+  index: 0
+idle
+  rotate: false
+  xy: 108, 0
+  size: 108, 44
+  orig: 108, 44
+  offset: 0, 0
+  index: 1
