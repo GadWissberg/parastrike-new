@@ -1,23 +1,26 @@
 package com.gadarts.parashoot.screens.Menus;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
-import com.badlogic.gdx.Net;
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.Interpolation;
-import com.badlogic.gdx.net.HttpRequestBuilder;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
-import com.badlogic.gdx.scenes.scene2d.actions.*;
-import com.badlogic.gdx.scenes.scene2d.ui.*;
+import com.badlogic.gdx.scenes.scene2d.actions.Actions;
+import com.badlogic.gdx.scenes.scene2d.actions.SizeByAction;
+import com.badlogic.gdx.scenes.scene2d.ui.Button;
+import com.badlogic.gdx.scenes.scene2d.ui.ButtonGroup;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Stack;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.WidgetGroup;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Scaling;
-import com.badlogic.gdx.utils.TimeUtils;
 import com.badlogic.gdx.utils.Timer;
 import com.gadarts.parashoot.Parastrike;
 import com.gadarts.parashoot.assets.Assets;
@@ -33,16 +36,18 @@ import com.gadarts.parashoot.weapons.BulletType;
 
 import java.util.HashMap;
 
-import static com.gadarts.parashoot.assets.Assets.Configs.Preferences.Settings.*;
-import static com.gadarts.parashoot.assets.Assets.Strings.Menu.*;
-import static com.gadarts.parashoot.assets.SFX.Menu.*;
+import static com.gadarts.parashoot.assets.Assets.Configs.Preferences.Settings.AUTO_CLOUD_SAVING;
+import static com.gadarts.parashoot.assets.Assets.Configs.Preferences.Settings.PREF_SETTINGS;
+import static com.gadarts.parashoot.assets.Assets.Strings.Menu.Lobby;
+import static com.gadarts.parashoot.assets.Assets.Strings.Menu.MentorsMessages;
+import static com.gadarts.parashoot.assets.Assets.Strings.Menu.Shop;
+import static com.gadarts.parashoot.assets.SFX.Menu.SYSTEM_WARNING;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.AttackButton.EXPAND_DURATION;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.AttackButton.INTERVAL;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.AttackButton.SHRINK_DURATION;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.AttackButton.SIZE_EFFECT_DELTA;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.CLOUD_OFFSET_X;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.CLOUD_OFFSET_Y;
-import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.COINS_BUTTON_X;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.InfoBorders.ATTRIBUTE_LABEL_PADDING_LEFT;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.InfoBorders.ATTRIBUTE_PADDING_BOTTOM;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.InfoBorders.BOMBS_X;
@@ -64,7 +69,10 @@ import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.MONITOR_Y
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.STACK_PADDING_LEFT;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.UPGRADE_BUTTON_X;
 import static com.gadarts.parashoot.utils.Rules.Menu.Lobby.MainMonitor.UPGRADE_BUTTON_Y;
-import static com.gadarts.parashoot.utils.Rules.Menu.Mentors.Names.*;
+import static com.gadarts.parashoot.utils.Rules.Menu.Mentors.Names.AMMUNITION_DEPLETED;
+import static com.gadarts.parashoot.utils.Rules.Menu.Mentors.Names.CHANGE_CANNON;
+import static com.gadarts.parashoot.utils.Rules.Menu.Mentors.Names.CHANGE_SIDE_KICK;
+import static com.gadarts.parashoot.utils.Rules.Menu.Mentors.Names.GO_TO_BATTLE;
 
 /**
  * Created by Gad on 21/10/2016.
@@ -79,7 +87,6 @@ public class LobbyScreen extends MenuScreenImproved {
     private BunkerScheme bunkerScheme;
     private ButtonGroup<WeaponSelectionButton> cannonsSelectionButtonGroup;
     private Image gameSavedImage;
-    private Label coinsValueLabel;
     private ImageButton attack;
 
     public LobbyScreen() {
@@ -98,228 +105,6 @@ public class LobbyScreen extends MenuScreenImproved {
                     LobbyScreen.this);
         }
     };
-
-    private void checkDailyGift() {
-        final Preferences preferences = Gdx.app.getPreferences(PREF_SETTINGS);
-        if (!preferences.getBoolean(DAILY_GIFT_APPEAR, true))
-            return;
-        if (TimeUtils.timeSinceMillis(preferences.getLong(DAILY_GIFT_LAST_CHECKED, 0)) < Rules.Menu.Lobby.Gift.TIME_CHECK_INTERVAL) {
-            createGift();
-            return;
-        }
-        Net.HttpRequest httpRequest = createHttpRequest(Net.HttpMethods.GET, Rules.Server.REQ_ID + "=" + Rules.Server.DAILY_GIFT);
-        Parastrike.getInstance().actionResolver.toast("SENT");
-        Gdx.net.sendHttpRequest(httpRequest, new Net.HttpResponseListener() {
-            @Override
-            public void handleHttpResponse(Net.HttpResponse httpResponse) {
-                if (httpResponse.getResultAsString().equals(Rules.Server.RESPONSE_VALUE_TRUE)) {
-                    createGift();
-                    preferences.putLong(DAILY_GIFT_LAST_CHECKED, TimeUtils.millis());
-                    preferences.flush();
-                }
-            }
-
-            @Override
-            public void failed(Throwable t) {
-            }
-
-            @Override
-            public void cancelled() {
-
-            }
-        });
-
-    }
-
-
-    private Net.HttpRequest createHttpRequest(String method, String content) {
-        HttpRequestBuilder requestBuilder = new HttpRequestBuilder();
-        return requestBuilder.newRequest().method(method).url(Assets.Strings.SERVER_ADDRESS).content(content).build();
-    }
-
-    private void createGift() {
-        Gift gift = new Gift(getSkin().getDrawable(Assets.GFX.Sheets.ImagesNames.GIFT));
-        gift.setPosition(Rules.Menu.Lobby.Gift.CREATION_X, Rules.Menu.Lobby.Gift.Y);
-        initializeGiftButton(gift);
-        getStage().addActor(gift);
-        createAndAddActionsToGift(gift);
-    }
-
-    private void initializeGiftButton(Gift gift) {
-        Image button = gift.getImage();
-        button.setSize(gift.getWidth(), gift.getHeight());
-        button.setScaling(Scaling.none);
-        button.setOrigin(button.getWidth() / 2, button.getHeight() / 2);
-        button.addListener(defineGiftClick(gift));
-    }
-
-    private ButtonClickImproved defineGiftClick(final Gift gift) {
-        return new ButtonClickImproved() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                super.clicked(event, x, y);
-                WidgetGroup content = null;
-                if (!getMonitors().containsKey(Rules.Menu.Lobby.Gift.Monitor.NAME)) {
-                    content = defineGiftMonitorContent(gift);
-                }
-                createMonitor(content, Rules.Menu.Lobby.Gift.Monitor.WIDTH, Rules.Menu.Lobby.Gift.Monitor.HEIGHT, Rules.Menu.Lobby.Gift.Monitor.Y, false, true, true, Lobby.GiftMonitor.HEADER, Rules.Menu.Lobby.Gift.Monitor.NAME).setBackButtonVisibility(false).setCloseButton(true);
-            }
-
-            private WidgetGroup defineGiftMonitorContent(Gift gift) {
-                Table table = new Table();
-                BitmapFont font = Parastrike.getAssetsManager().get(Rules.System.FontsParameters.RegularFontNames.SMALL, BitmapFont.class);
-                Label message = createMessageLabel(table, font);
-                TextField textField = createTextField(table, font);
-                createFacebookButton(table);
-                createSubmitButton(table, textField, message, gift);
-                return table;
-            }
-
-            private void createSubmitButton(Table table, final TextField textField, Label message, Gift gift) {
-                Skin skin = LobbyScreen.this.getSkin();
-                Button button = new Button(skin.getDrawable(Assets.GFX.Sheets.ImagesNames.WELCOME_RATE_SUBMIT), skin.getDrawable(Assets.GFX.Sheets.ImagesNames.WELCOME_RATE_SUBMIT_PRESSED));
-                button.addListener(defineSubmitClick(textField, message, gift, button));
-                table.add(button).padTop(Rules.Menu.Lobby.Gift.Monitor.SUBMIT_PADDING_VERTICAL).padBottom(Rules.Menu.Lobby.Gift.Monitor.SUBMIT_PADDING_VERTICAL);
-            }
-
-            private ButtonClickImproved defineSubmitClick(final TextField textField, final Label message, final Gift gift, final Button submitButton) {
-                return new ButtonClickImproved() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        super.clicked(event, x, y);
-                        Gdx.net.sendHttpRequest(createHttpRequest(Net.HttpMethods.POST, Rules.Server.REQ_ID + "=" + Rules.Server.DAILY_GIFT + "&" + Rules.Server.PASS + "=" + textField.getText()), defineResponseListener());
-                    }
-
-                    private Net.HttpResponseListener defineResponseListener() {
-                        return new Net.HttpResponseListener() {
-                            @Override
-                            public void handleHttpResponse(Net.HttpResponse httpResponse) {
-                                if (httpResponse.getResultAsString().equals(Rules.Server.RESPONSE_VALUE_TRUE)) {
-                                    success(gift, submitButton);
-                                } else {
-                                    fail();
-                                }
-                            }
-
-                            private void fail() {
-                                message.setText(Lobby.GiftMonitor.MESSAGE_FAIL);
-                                message.setColor(Color.RED);
-                                Parastrike.getSoundPlayer().playSound(SYSTEM_ERROR);
-                            }
-
-                            private void success(Gift gift, Button submitButton) {
-                                message.setText(Lobby.GiftMonitor.MESSAGE_SUCCESS);
-                                message.setColor(Color.GREEN);
-                                gainCoins();
-                                updateSettings();
-                                removeButtons(gift, submitButton);
-                            }
-
-                            private void updateSettings() {
-                                Preferences preferences = Gdx.app.getPreferences(PREF_SETTINGS);
-                                preferences.putBoolean(DAILY_GIFT_APPEAR, false);
-                                preferences.flush();
-                            }
-
-                            private void removeButtons(Gift gift, Button submitButton) {
-                                submitButton.remove();
-                                gift.remove();
-                            }
-
-                            private void gainCoins() {
-                                PlayerStatsHandler playerStatsHandler = Parastrike.getPlayerStatsHandler();
-                                int newCoinsValue = playerStatsHandler.getCoins() + Rules.Menu.Lobby.Gift.GIFT_VALUE;
-                                playerStatsHandler.setCoins(newCoinsValue);
-                                Parastrike.getPlayerStatsHandler().commitStats();
-                                Parastrike.getSoundPlayer().playSound(SYSTEM_CONFIRM);
-                                coinsValueLabel.setText(String.valueOf(newCoinsValue));
-                            }
-
-                            @Override
-                            public void failed(Throwable t) {
-
-                            }
-
-                            @Override
-                            public void cancelled() {
-
-                            }
-                        };
-                    }
-                };
-            }
-
-            private TextField createTextField(Table table, BitmapFont font) {
-                Skin skin = LobbyScreen.this.getSkin();
-                final TextField textField = new TextField(Lobby.GiftMonitor.INITIAL_VALUE, new TextField.TextFieldStyle(font, Color.GOLD, skin.getDrawable(Assets.GFX.Sheets.ImagesNames.TEXT_CURSOR), skin.getDrawable(Assets.GFX.Sheets.ImagesNames.TEXT_SELECTION), skin.getDrawable(Assets.GFX.Sheets.ImagesNames.TEXT_INPUT_BACKGROUND)));
-                setTextFieldAttributes(textField);
-                table.add(textField).padBottom(Rules.Menu.Lobby.Gift.Monitor.TEXT_FIELD_PADDING_VERTICAL).padTop(Rules.Menu.Lobby.Gift.Monitor.TEXT_FIELD_PADDING_VERTICAL).width(Rules.Menu.Lobby.Gift.Monitor.TEXT_FIELD_WIDTH).colspan(2).row();
-                textField.addListener(defineTextFieldClick(textField));
-                return textField;
-            }
-
-            private void setTextFieldAttributes(TextField textField) {
-                textField.setWidth(Rules.Menu.Lobby.Gift.Monitor.TEXT_FIELD_WIDTH);
-                textField.setAlignment(Align.center);
-                textField.setDisabled(true);
-            }
-
-            private ButtonClickImproved defineTextFieldClick(final TextField textField) {
-                return new ButtonClickImproved() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        super.clicked(event, x, y);
-                        Input.TextInputListener listener = new Input.TextInputListener() {
-                            @Override
-                            public void input(String text) {
-                                textField.setText(text);
-                            }
-
-                            @Override
-                            public void canceled() {
-
-                            }
-                        };
-                        Gdx.input.getTextInput(listener, Lobby.GiftMonitor.INPUT_HEADER, textField.getText(), Lobby.GiftMonitor.INPUT_HINT);
-                    }
-                };
-            }
-
-            private void createFacebookButton(Table table) {
-                Skin skin = LobbyScreen.this.getSkin();
-                Button facebookButton = new Button(skin.getDrawable(Assets.GFX.Sheets.ImagesNames.WELCOME_FACEBOOK), skin.getDrawable(Assets.GFX.Sheets.ImagesNames.WELCOME_FACEBOOK_PRESSED));
-                facebookButton.addListener(defineFacebookButtonClick());
-                table.add(facebookButton);
-            }
-
-            private ButtonClickImproved defineFacebookButtonClick() {
-                return new ButtonClickImproved() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        super.clicked(event, x, y);
-                        Parastrike.getInstance().getActionResolver().openUrl(Assets.Strings.FACEBOOK_PAGE);
-                    }
-                };
-            }
-
-            private Label createMessageLabel(Table table, BitmapFont font) {
-                Label message = new Label(Lobby.GiftMonitor.MESSAGE, new Label.LabelStyle(font, Color.GOLD));
-                message.setWrap(true);
-                message.setAlignment(Align.center);
-                table.add(message).colspan(2).width(Rules.Menu.Lobby.Gift.Monitor.WIDTH).top().row();
-                return message;
-            }
-        };
-    }
-
-    private void createAndAddActionsToGift(ImageButton gift) {
-        RotateByAction rotateLeft = Actions.rotateBy(Rules.Menu.Lobby.Gift.ROTATE_DELTA, Rules.Menu.Lobby.Gift.ROTATE_DURATION);
-        RotateByAction rotateRight = Actions.rotateBy(-Rules.Menu.Lobby.Gift.ROTATE_DELTA, Rules.Menu.Lobby.Gift.ROTATE_DURATION);
-        gift.addAction(new SequenceAction(Actions.delay(Rules.Menu.Lobby.Gift.ENTRY_DELAY), Actions.moveTo(Rules.Menu.Lobby.Gift.TARGET_X, Rules.Menu.Lobby.Gift.Y, Rules.Menu.Lobby.Gift.MOVE_DURATION, Interpolation.elasticOut)));
-        RepeatAction fadeAction = Actions.forever(new SequenceAction(Actions.fadeIn(Rules.Menu.Lobby.Gift.FADE_DURATION, Interpolation.smooth), Actions.fadeOut(Rules.Menu.Lobby.Gift.FADE_DURATION, Interpolation.smooth)));
-        RepeatAction rotationAction = Actions.forever(new SequenceAction(Actions.delay(Rules.Menu.Lobby.Gift.ROTATE_INTERVAL), rotateLeft, rotateRight));
-        gift.getImage().addAction(new ParallelAction(fadeAction, rotationAction));
-    }
 
     private void addCloudSavedImage() {
         gameSavedImage = new Image(getSkin(), Assets.GFX.Sheets.ImagesNames.GAME_SAVED);
@@ -497,18 +282,8 @@ public class LobbyScreen extends MenuScreenImproved {
     @Override
     public void show() {
         super.show();
-        cloudSaveGame();
         Parastrike.getMentorsManager().readyMentorIfDidntRun(GO_TO_BATTLE);
         scheduleMentor(GO_TO_BATTLE, TASK_MENTOR_GO_TO_BATTLE);
-    }
-
-    private void cloudSaveGame() {
-        GGSActionResolver ggs = Parastrike.getGGS();
-        Preferences preferences = Gdx.app.getPreferences(PREF_SETTINGS);
-        if (!ggs.shouldSaveGame() || !preferences.getBoolean(AUTO_CLOUD_SAVING, true)) {
-            return;
-        }
-        ggs.saveSnapshot(gameSavedImage);
     }
 
     private void createBunkerScheme(Skin skin, Table layout) {
@@ -627,7 +402,6 @@ public class LobbyScreen extends MenuScreenImproved {
 
     private class BunkerScheme extends Image {
 
-        private final CoinsButton coinsButton;
         private Label ammoLabel;
         private InfoBorder bunkerInfoBorder;
         private InfoBorder cannonInfoBorder;
@@ -637,8 +411,6 @@ public class LobbyScreen extends MenuScreenImproved {
         public BunkerScheme(Skin skin, Table layout) {
             super(skin, Assets.GFX.Sheets.ImagesNames.LOBBY_BUNKER);
             setTouchable(Touchable.childrenOnly);
-            coinsButton = new CoinsButton(getSkin());
-            layout.addActor(coinsButton);
             createInfoBorders(layout);
             createAmmoInfo(layout);
             createUpgradeButton(layout);
@@ -784,7 +556,6 @@ public class LobbyScreen extends MenuScreenImproved {
             PlayerStatsHandler playerStatsHandler = Parastrike.getPlayerStatsHandler();
             bunkerInfoBorder.addAttribute(Shop.Stats.ARMOR, Assets.GFX.Sheets.ImagesNames.SMALL_ARMOR_ICON, Double.toString((playerStatsHandler.getBunkerArmorLevel() / 10.0) + 1.0));
             bunkerInfoBorder.addAttribute(Shop.Stats.GENERATOR, Assets.GFX.Sheets.ImagesNames.SMALL_GEAR_ICON, Double.toString((playerStatsHandler.getBunkerGeneratorLevel() / 10.0) + 1.0));
-            coinsValueLabel = bunkerInfoBorder.addAttribute(Shop.Stats.COINS, Assets.GFX.Sheets.ImagesNames.SMALL_COIN_ICON, String.valueOf(playerStatsHandler.getCoins()));
             bunkerInfoBorder.addListener(new ButtonClickImproved() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
@@ -798,7 +569,6 @@ public class LobbyScreen extends MenuScreenImproved {
         @Override
         public void act(float delta) {
             super.act(delta);
-            coinsButton.setPosition(COINS_BUTTON_X, BUNKER_Y);
             bunkerInfoBorder.setPosition(BUNKER_X, BUNKER_Y);
             cannonInfoBorder.setPosition(CANNONS_X, BUNKER_Y);
             bombsInfoBorder.setPosition(BOMBS_X, BOMB_Y);
@@ -807,7 +577,7 @@ public class LobbyScreen extends MenuScreenImproved {
     }
 
     private class WeaponSelectionButton extends Button {
-        private WeaponType weapon;
+        private final WeaponType weapon;
         private Table selectedSign;
         private Table specialSign;
 
@@ -925,35 +695,6 @@ public class LobbyScreen extends MenuScreenImproved {
 
         public WeaponType getWeapon() {
             return weapon;
-        }
-    }
-
-    private class Gift extends ImageButton {
-        public Gift(Drawable drawable) {
-            super(drawable);
-            Skin skin = LobbyScreen.this.getSkin();
-            Button closeButton = new Button(skin.getDrawable(Assets.GFX.Sheets.ImagesNames.SMALL_X), skin.getDrawable(Assets.GFX.Sheets.ImagesNames.SMALL_X_PRESSED));
-            closeButton.addListener(defineCloseButtonClick());
-            add(closeButton).padLeft(Rules.Menu.Lobby.Gift.CLOSE_BUTTON_PADDING_LEFT).top();
-        }
-
-        private ButtonClickImproved defineCloseButtonClick() {
-            return new ButtonClickImproved() {
-                @Override
-                public void clicked(InputEvent event, float x, float y) {
-                    super.clicked(event, x, y);
-                    remove();
-                    Preferences preferences = Gdx.app.getPreferences(PREF_SETTINGS);
-                    preferences.putBoolean(DAILY_GIFT_APPEAR, false);
-                    preferences.flush();
-                }
-            };
-        }
-
-        @Override
-        public void draw(Batch batch, float parentAlpha) {
-            super.draw(batch, parentAlpha);
-            batch.setColor(Color.WHITE);
         }
     }
 }

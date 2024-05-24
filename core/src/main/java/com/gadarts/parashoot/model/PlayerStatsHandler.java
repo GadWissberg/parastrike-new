@@ -462,13 +462,6 @@ public class PlayerStatsHandler {
         return (getBunkerGeneratorLevel() + 10) / 10;
     }
 
-    public static void reportEvent(String eventName) {
-        Preferences prefs = Gdx.app.getPreferences(PREF_PLAYER);
-        HashMap<String, String> attributes = new HashMap<String, String>();
-        attributes.put(Rules.System.Analytics.Attributes.MenuScreen.COINS, String.valueOf(prefs.getInteger(COINS)));
-        Parastrike.getInstance().actionResolver.analyticsEventReport(eventName, attributes);
-    }
-
     public void reset() {
         Parastrike.getInstance().actionResolver.toast(Assets.Strings.Menu.Options.RESTARTED);
         playerSavedStats.clear();

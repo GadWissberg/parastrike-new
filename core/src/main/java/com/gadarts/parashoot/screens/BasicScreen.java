@@ -28,7 +28,7 @@ public abstract class BasicScreen implements Screen {
     protected final Stage menuStage = new Stage();
     protected BitmapFont armyFont, digitalFont, regularFont;
     protected final GlyphLayout fontLayout = new GlyphLayout();
-    private LoadingsDoors loadingDoors;
+    private final LoadingsDoors loadingDoors;
 
     public BasicScreen() {
         Skin skin = new Skin();
@@ -96,7 +96,8 @@ public abstract class BasicScreen implements Screen {
     protected class LoadingDoor extends Image {
         private final boolean BOTTOM;
         private final float OUTSIDE_Y, INSIDE_Y;
-        private TextureRegion rightRegion, loadingRegion;
+        private final TextureRegion rightRegion;
+        private TextureRegion loadingRegion;
         private float verticalSpeed;
         private Timer.Task loadingTask, onCompletionTask;
         private ScrollPane.ScrollPaneStyle scrollPaneStyle;
@@ -132,7 +133,12 @@ public abstract class BasicScreen implements Screen {
                     } else {
                         percent = 100;
                     }
-                    drawText(batch, Parastrike.getAssetsManager().get(Rules.System.FontsParameters.ArmyFontNames.MEDIUM, BitmapFont.class), Rules.System.Resolution.WIDTH_TARGET_RESOLUTION / 2, getY() + getHeight(), Integer.toString(percent) + "...", true, Color.RED);
+                    drawText(
+                        batch,
+                        Parastrike.getAssetsManager().get(Rules.System.FontsParameters.ArmyFontNames.MEDIUM, BitmapFont.class),
+                        Rules.System.Resolution.WIDTH_TARGET_RESOLUTION / 2F,
+                        getY() + getHeight(),
+                        percent + "...", true, Color.RED);
                 }
             }
         }
@@ -259,11 +265,10 @@ public abstract class BasicScreen implements Screen {
     }
 
     protected void drawText(Batch batch, BitmapFont font, float targetWidth, float x, float y, String text, int alignment, Color color) {
-        if (text == null || text.equals("")) {
+        if (text == null || text.isEmpty()) {
             return;
         }
-        int align = alignment;
-        fontLayout.setText(font, text, color, targetWidth, align, true);
+        fontLayout.setText(font, text, color, targetWidth, alignment, false);
         font.draw(batch, fontLayout, x, y);
     }
 
@@ -273,8 +278,8 @@ public abstract class BasicScreen implements Screen {
     }
 
     protected class LoadingsDoors {
-        private LoadingDoor topLoadingDoor;
-        private LoadingDoor bottomLoadingDoor;
+        private final LoadingDoor topLoadingDoor;
+        private final LoadingDoor bottomLoadingDoor;
 
         public LoadingsDoors(Skin skin) {
             topLoadingDoor = new LoadingDoor(skin, Assets.GFX.Sheets.ImagesNames.TOP_LEFT_LOADING, Assets.GFX.Sheets.ImagesNames.TOP_RIGHT_LOADING, false);

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Google Play game services IDs.
+Save this file as res/values/games-ids.xml in your project.
+-->
+<resources>
+    <string name="app_id">1011337592485</string>
+    <string name="package_name">com.gadarts.parashoot.android</string>
+    <string name="leaderboard_highscores">CgkIpf2rw7cdEAIQAQ</string>
+</resources>

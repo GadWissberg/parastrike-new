@@ -8,10 +8,10 @@ import com.gadarts.parashoot.weapons.BulletType;
  */
 public final class Assets {
     @SuppressWarnings("WeakerAccess")
-    public final class InGameGuides {
+    public static final class InGameGuides {
 
         @SuppressWarnings("unused")
-        public final class MenuGuides {
+        public static final class MenuGuides {
             public static final String FOLDER_NAME = "menu_guides";
             public static final String KEY_TUTORS = "tutors";
             public static final String DATA_EXTENSION = "json";
@@ -20,16 +20,16 @@ public final class Assets {
 
         public static final int MESSAGE_DURATION = 5;
 
-        public final class Animation {
+        public static final class Animation {
             public static final String START_X = "start_x";
             public static final String START_Y = "start_y";
             public static final String END_X = "end_x";
             public static final String END_Y = "end_y";
             public static final String MESSAGE = "message";
-            public static final float MESSAGE_Y = Rules.System.Resolution.HEIGHT_TARGET_RESOLUTION / 2 + 200;
+            public static final float MESSAGE_Y = Rules.System.Resolution.HEIGHT_TARGET_RESOLUTION / 2F + 200;
         }
 
-        public final class Focus {
+        public static final class Focus {
             public static final String TARGET = "target";
             public static final String MESSAGE = "message";
             public static final String SHOW_FINGER = "show_finger";
@@ -44,21 +44,21 @@ public final class Assets {
     public static final class GFX {
         static final String GFX_FOLDER_NAME = "gfx";
 
-        public final class Images {
+        public static final class Images {
             static final String IMAGES_FOLDER = GFX_FOLDER_NAME + "/" + Images.FOLDER_NAME + "/";
 
-            public final class General {
+            public static final class General {
                 static final String FOLDER_NAME = "general";
                 public static final String NIGHT = IMAGES_FOLDER + FOLDER_NAME + "/" + "night.png";
             }
 
-            public final class Menus {
+            public static final class Menus {
                 static final String FOLDER_NAME = "menus";
                 static final String MENUS_FOLDER = IMAGES_FOLDER + FOLDER_NAME + "/";
                 public static final String SCAN_LINES = MENUS_FOLDER + "generic_screen_background.png";
                 public static final String LOGO = MENUS_FOLDER + "logo.png";
 
-                public final class ScenesThumbs {
+                public static final class ScenesThumbs {
                     static final String FOLDER_NAME = "scenes_thumbs";
                     static final String SCENES_FOLDER = MENUS_FOLDER + FOLDER_NAME + "/";
                     public static final String MILITARY = SCENES_FOLDER + "military.png";
@@ -73,8 +73,8 @@ public final class Assets {
                 }
             }
 
-            public final class InGame {
-                public final class GroundTypes {
+            public static final class InGame {
+                public static final class GroundTypes {
                     public static final String MILITARY = IMAGES_FOLDER + FOLDER_NAME + "/" + "ground_military.png";
                     public static final String ARCTIC = IMAGES_FOLDER + FOLDER_NAME + "/" + "ground_arctic.png";
                     public static final String BEACH = IMAGES_FOLDER + FOLDER_NAME + "/" + "ground_beach.png";
@@ -85,7 +85,7 @@ public final class Assets {
                     public static final String DESERT = IMAGES_FOLDER + FOLDER_NAME + "/" + "ground_dunes.png";
                 }
 
-                public final class Landscapes {
+                public static final class Landscapes {
                     public static final String MILITARY = IMAGES_FOLDER + FOLDER_NAME + "/" + "landscape_military.png";
                     public static final String ARCTIC = IMAGES_FOLDER + FOLDER_NAME + "/" + "landscape_arctic.png";
                     public static final String BEACH_1 = IMAGES_FOLDER + FOLDER_NAME + "/" + "landscape_beach_1.png";
@@ -160,8 +160,8 @@ public final class Assets {
 
                 public static final String HUD_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + InGame.FOLDER_NAME + "/" + "hud.txt";
 
-                public final class Misc {
-                    public final class Ornaments {
+                public static final class Misc {
+                    public static final class Ornaments {
                         public static final String DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + InGame.FOLDER_NAME + "/" + "ornaments_general.txt";
 
                     }
@@ -172,8 +172,8 @@ public final class Assets {
 
                 }
 
-                public final class Enemies {
-                    public final class AirCrafts {
+                public static final class Enemies {
+                    public static final class AirCrafts {
                         public static final String ZEPPELIN_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + InGame.FOLDER_NAME + "/" + "zeppelin.txt";
                         public static final String SCOUT_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + InGame.FOLDER_NAME + "/" + "scout.txt";
                         public static final String BONUS_SCOUT_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + InGame.FOLDER_NAME + "/" + "scout_bonus.txt";
@@ -184,14 +184,14 @@ public final class Assets {
 
                     }
 
-                    public final class GroundUnits {
-                        public final class GroundCrafts {
+                    public static final class GroundUnits {
+                        public static final class GroundCrafts {
                             public static final String APC_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + InGame.FOLDER_NAME + "/" + "apc.txt";
                             public static final String TANK_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + InGame.FOLDER_NAME + "/" + "tank.txt";
 
                         }
 
-                        public final class Paratroopers {
+                        public static final class Paratroopers {
                             public static final String PARACHUTE_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + InGame.FOLDER_NAME + "/" + "parachute.txt";
                             public static final String INFANTRY_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + InGame.FOLDER_NAME + "/" + "infantry.txt";
                             public static final String CHAINGUNNER_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + InGame.FOLDER_NAME + "/" + "chaingunner.txt";
@@ -201,7 +201,7 @@ public final class Assets {
                 }
             }
 
-            public final class ImagesNames {
+            public static final class ImagesNames {
                 public static final String IDLE = "idle";
                 public static final String DOWN = "down";
                 public static final String DOWN_RIGHT = "down_right";
@@ -271,12 +271,6 @@ public final class Assets {
                 public static final String WELCOME_SOUND_OFF = "welcome_sound_off";
                 public static final String WELCOME_RATE = "welcome_rate";
                 public static final String WELCOME_RATE_PRESSED = "welcome_rate_pressed";
-                public static final String WELCOME_FACEBOOK = "welcome_facebook";
-                public static final String WELCOME_FACEBOOK_PRESSED = "welcome_facebook_pressed";
-                public static final String WELCOME_WEBSITE = "welcome_website";
-                public static final String WELCOME_WEBSITE_PRESSED = "welcome_website_pressed";
-                public static final String WELCOME_RATE_SUBMIT = "rate_submit";
-                public static final String WELCOME_RATE_SUBMIT_PRESSED = "rate_submit_pressed";
                 public static final String WELCOME_RATE_GOOGLE = "rate_google";
                 public static final String WELCOME_RATE_GOOGLE_PRESSED = "rate_google_pressed";
                 public static final String WELCOME_HIGHSCORES = "welcome_highscores";
@@ -315,8 +309,6 @@ public final class Assets {
                 public static final String ICON_SCORE = "score_icon";
                 public static final String ICON_COINS = "coins_icon";
                 public static final String ICON_CROSSHAIR = "crosshair_icon";
-                public static final String SELECTION_SCREEN_LEFT = "selection_screen_left";
-                public static final String SELECTION_SCREEN_RIGHT = "selection_screen_right";
                 public static final String BOTTOM_TUBE = "bottom_tube";
                 public static final String TOP_TUBE = "top_tube";
                 public static final String CANNONS_BUTTON = "cannons_button";
@@ -328,8 +320,6 @@ public final class Assets {
                 public static final String SIDEKICK_BUTTON = "sidekick_button";
                 public static final String SIDEKICK_BUTTON_PRESSED = "sidekick_button_pressed";
                 public static final String SIDEKICK_BUTTON_CHECK = "sidekick_button_selected";
-                public static final String MAIN_SCREEN_LEFT = "main_screen_left";
-                public static final String MAIN_SCREEN_RIGHT = "main_screen_right";
                 public static final String THUMB_CANNON_BALL = "cannon_ball_thumb";
                 public static final String THUMB_SPREAD = "spread_thumb";
                 public static final String THUMB_CHAINGUN = "chaingun_thumb";
@@ -364,19 +354,12 @@ public final class Assets {
                 public static final String UPGRADE_BUTTON_PRESSED = "upgrade_button_pressed";
                 public static final String CELL_EMPTY = "empty_cell";
                 public static final String CELL_FULL = "full_cell";
-                public static final String EMPTY_SCREEN = "empty_screen";
                 public static final String CLOSE_BUTTON = "close_button";
                 public static final String CLOSE_BUTTON_PRESSED = "close_button_pressed";
                 public static final String PURCHASE_BUTTON = "purchase_button";
                 public static final String PURCHASE_BUTTON_PRESSED = "purchase_button_pressed";
-                public static final String COINS_BUTTON = "coins_button";
-                public static final String COINS_BUTTON_PRESSED = "coins_button_pressed";
                 public static final String BACK_BUTTON = "back_button";
                 public static final String BACK_BUTTON_PRESSED = "back_button_pressed";
-                public static final String BIG_ARROW_LEFT = "big_arrow_left";
-                public static final String BIG_ARROW_LEFT_PRESSED = "big_arrow_left_pressed";
-                public static final String BIG_ARROW_RIGHT = "big_arrow_right";
-                public static final String BIG_ARROW_RIGHT_PRESSED = "big_arrow_right_pressed";
                 public static final String ICON_GEAR = "gears_icon";
                 public static final String ILLUSTRATION_CANNON_BALL = "ill_cannon_ball";
                 public static final String ILLUSTRATION_SPREAD = "ill_spread";
@@ -439,7 +422,6 @@ public final class Assets {
                 public static final String LOCK = "lock";
                 public static final String NO_AMMO_SIGN = "no_ammo_sign";
                 public static final String SELECTED_SIGN_BIG = "selected_sign_big";
-                public static final String SELECTED_SIGN = "selected_sign";
                 public static final String LEVEL_BUTTON = "level_button";
                 public static final String LEVEL_BUTTON_PRESSED = "level_button_pressed";
                 public static final String STAR_LEVEL_FILLED = "star_level";
@@ -527,16 +509,9 @@ public final class Assets {
                 public static final String CAMEL = "camel";
                 public static final String BOSS_BODY = "boss_body";
                 public static final String BOSS_GUN = "boss_gun";
-                public static final String BOSS_GUN_DEAD = "boss_gun_dead";
-                public static final String BOSS_GUN_SHOOT = "boss_gun_shoot";
-                public static final String BOSS_GUN_BULLET = "boss_gun_bullet";
                 public static final String BOSS_SHIELD = "boss_shield";
                 public static final String MENTOR_POINTER = "mentor_pointer";
                 public static final String MENTOR_SWIPE = "mentor_swipe";
-                public static final String COINS_1 = "coins_1";
-                public static final String COINS_2 = "coins_2";
-                public static final String COINS_3 = "coins_3";
-                public static final String COINS_4 = "coins_4";
             }
 
             public static final class Menus {
@@ -554,8 +529,6 @@ public final class Assets {
                 public static final class ShopMenu {
 
                     public static final String SHOP_MENU_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + FOLDER_NAME + "/" + "shop_menu.txt";
-                    public static final String SHOP_MENU_ADDITIONAL_SCREENS_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + FOLDER_NAME + "/" + "shop_additional_screens.txt";
-                    public static final String SHOP_MENU_MAIN_SCREEN_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + FOLDER_NAME + "/" + "buy_screen.txt";
                     public static final String CANNONS_THUMBS_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + FOLDER_NAME + "/" + "cannons_thumbs.txt";
                     public static final String ARMORY_THUMBS_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + FOLDER_NAME + "/" + "armory_thumbs.txt";
                     public static final String SIDEKICKS_THUMBS_DATA_FILE = GFX_FOLDER_NAME + "/" + SHEETS_FOLDER_NAME + "/" + FOLDER_NAME + "/" + "sidekicks_thumbs.txt";
@@ -570,7 +543,7 @@ public final class Assets {
     }
 
 
-    public final class Configs {
+    public static final class Configs {
         public static final String CONFIGS_FOLDER_NAME = "configs";
         public static final String GFX_FOLDER_NAME = "gfx";
         public static final String PARTICLE_CONFIGS_FOLDER_NAME = "particle_effects";
@@ -578,13 +551,13 @@ public final class Assets {
         public static final String PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.gadarts.parashoot.android";
         public static final String LEADERBOARDS_ID = "CgkIpf2rw7cdEAIQAQ";
 
-        public final class GFX {
+        public static final class GFX {
             public static final String VERTEX_SHADER = "vertex_shader.vs";
             public static final String RED_SHADER = "red_shader.fs";
             public static final String WHITE_SHADER = "white_shader.fs";
         }
 
-        public final class ParticleEffects {
+        public static final class ParticleEffects {
             public static final String SMOKE = "smoke";
             public static final String SMALL_SMOKE = "small_smoke";
             public static final String EXPLOSION = "exp";
@@ -631,20 +604,19 @@ public final class Assets {
             public static final String SCENE_UNLOCKED_STARS = "scene_unlocked_stars";
         }
 
-        public final class Preferences {
+        public static final class Preferences {
 
 
-            public final class Mentors {
+            public static final class Mentors {
                 public static final String PREF_MENTORS = "mentors";
             }
 
-            public final class InGameGuides {
+            public static final class InGameGuides {
                 public static final String PREF_GUIDES = "guides";
                 public static final String TUTORIAL_COMPLETE = "tutorial_complete";
             }
 
-            public final class Settings {
-                public static final String DONT_ASK_TO_LOGIN = "dont_ask_to_login";
+            public static final class Settings {
                 public static final String PREF_SETTINGS = "settings";
                 public static final String MESSAGES = "messages";
                 public static final String VIBRATION = "vibration";
@@ -654,13 +626,10 @@ public final class Assets {
                 public static final String GOOGLE_GAMES = "google_games";
                 public static final String AUTO_CLOUD_SAVING = "auto_cloud_saving";
                 public static final String SOUND = "sound";
-                public static final String DAILY_GIFT_APPEAR = "daily_gift_appear";
-                public static final String DAILY_GIFT_LAST_ENABLED = "daily_gift_last_enabled";
-                public static final String DAILY_GIFT_LAST_CHECKED = "daily_gift_last_checked";
                 public static final String INTRO_WAS_SHOWN = "intro_was_shown";
             }
 
-            public final class Player {
+            public static final class Player {
                 public static final String LEVELS_STATES = "levels";
                 public static final String SCENES_STATES = "scenes";
                 public static final String CANNONS = "cannons";
@@ -675,15 +644,12 @@ public final class Assets {
                 public static final String STARS = "stars";
                 public static final String STATE = "state";
                 public static final String SCORE = "score";
-                public static final String VISITED_FACEBOOK = "visited_facebook";
             }
         }
     }
 
     public static final class Strings {
         public static final String PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz8KwbcSekZu7IL59NdyyXJW2ftt7wSwddo8E+/S1+huwEama7Byj1tsesP9IUi1jPptYfvaDmnkjFrMgimPh8F2lDix2+S/wpv7tzRHmmae5EbLo9vTwCQFqifpYjtyKf33HRqIXEIsvulevY+bgQA8JIUdD7IOOIChZ/a1+aGa2lLTxJX01mwYINbtlxzZtM9Y61GsChQAuVEqJjtHl74DJyTQmZeP2AfzUIL4XFxKoAonckGJ677LcPOz/FKXYTFUR6iwbu3e7FnsQT3cBHNUPPIp46bnW97a9y8VhWduDFIq+gMByaGI2/s+lSyGKl13ggzOG90SQWd1lnbVxPQIDAQAB";
-        public static final String FACEBOOK_PAGE = "https://www.facebook.com/parastrike";
-        public static final String SERVER_ADDRESS = "http://18.221.180.105:80";
 
 
         public static final class Menu {
@@ -826,7 +792,6 @@ public final class Assets {
                 public static final String THANK_YOU_HEADER = "Thank you!";
                 public static final String PLAY_STORE_TEXT = "Please rate this game also in the Google Play Store too!";
                 public static final String VISIT_FACEBOOK = "Like ParaStrike's Facebook page and get %d coins!";
-                public static final String VISIT_FACEBOOK_HEADER = "On Facebook";
                 public static final String THANKS_TEXT = "Thank you for rating this game!";
             }
 
@@ -870,26 +835,15 @@ public final class Assets {
 
             public static final class Shop {
 
-                public static final String NOT_ENOUGH_COINS = "Not enough coins!";
-                public static final String UPGRADE_GENERATOR = "Generator level required: ";
-                public static final String PURCHASED_SUCCESSFULLY = "You've purchased a new item!";
-                public static final String UPGRADED_SUCCESSFULLY = "Upgraded successfully!";
-                public static final String AMMO_PURCHASED_SUCCESSFULLY = "Ammo has been purchased!";
-                public static final String YOU_HAVE = "You have: ";
-                public static final String REACHED_MAX = "You've reached the maximum value!";
-                public static final String GET_MORE_COINS = "Get More Coins";
-                public static final String MIN_GENERATOR_REQ = "Min. generator level required: ";
 
                 public static final class Stats {
                     public static final String ENABLED = "Enabled";
                     public static final String STRENGTH = "Strength";
                     public static final String AMMO = "Ammo";
-                    public static final String AMOUNT = "Amount";
                     public static final String RATE = "Fire-Rate";
                     public static final String ARMOR = "Armor";
                     public static final String GENERATOR = "Gen.";
                     public static final String COINS = "Coins";
-                    public static final String UNLIMITED_AMMO = "Unlimited Ammo";
                 }
 
                 public static final class WeaponsDescriptions {

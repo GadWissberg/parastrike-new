@@ -11,12 +11,11 @@ import com.gadarts.parashoot.weapons.BulletType;
  */
 
 public class GameSettings {
-    public static final boolean SHOW_AND_LOG_FPS = true;
-    public static final boolean ALLOW_ANALYTICS = false;
+    public static final boolean SHOW_AND_LOG_FPS = false;
     public static final boolean SEND_SCORE = false;
     public static final boolean ALLOW_BUG_REPORTING = false;
-    public static boolean SOUND_TOGGLE = false;
-    public static final boolean SKIP_INTRO = true;
+    public static boolean SOUND_TOGGLE = true;
+    public static final boolean SKIP_INTRO = false;
     public static final boolean ENEMY_TESTING = false;
     public static final boolean ALLOW_ENEMIES = true;
     public static final EnemyFactory.EnemyType CREATE_ONLY_SPECIFIC_ENEMY = null;
@@ -31,7 +30,7 @@ public class GameSettings {
     public static final boolean SHOW_TABLES_LINES = false;
     public static final int GDX_DEBUG_LEVEL = Application.LOG_DEBUG;
     public static final int ASSET_MANAGER_DEBUG_LEVEL = Application.LOG_ERROR;
-    public static final boolean ALLOW_IAP_DEBUG = true;
+    public static final boolean ALLOW_IAP_DEBUG = false;
     public static final boolean SHOW_SPATIAL_GRID = false;
     public static final boolean SOUND_RANDOM_PITCH = true;
     public static final BulletType FORCE_BEGIN_CANNON = null;

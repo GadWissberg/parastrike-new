@@ -1,13 +1,9 @@
 package com.gadarts.parashoot;
 
-import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.profiling.GL20Interceptor;
 import com.badlogic.gdx.graphics.profiling.GLProfiler;
 import com.badlogic.gdx.utils.TimeUtils;
@@ -40,14 +36,10 @@ import com.gadarts.parashoot.weapons.BulletType;
 
 import java.util.HashMap;
 
-import static com.gadarts.parashoot.assets.Assets.Configs.Preferences.Settings.DAILY_GIFT_APPEAR;
-import static com.gadarts.parashoot.assets.Assets.Configs.Preferences.Settings.DAILY_GIFT_LAST_ENABLED;
-import static com.gadarts.parashoot.assets.Assets.Configs.Preferences.Settings.DONT_ASK_TO_LOGIN;
 import static com.gadarts.parashoot.assets.Assets.Configs.Preferences.Settings.PREF_SETTINGS;
 import static com.gadarts.parashoot.assets.Assets.Configs.Preferences.Settings.SOUND;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
-@SuppressWarnings("unchecked")
 public class Parastrike extends Game implements ApplicationListener {
     private static final int GL_LOG_INTERVAL = 1000;
     private static PlayerStatsHandler playerStatsHandler;
@@ -57,14 +49,12 @@ public class Parastrike extends Game implements ApplicationListener {
 
     public final ActionResolver actionResolver;
     private static MentorsManager mentorsManager;
-    private final GGSActionResolver ggsActionResolver;
     private long lastGLlog;
     private GLProfiler glProfiler;
     private MentorsFactory mentorsFactory;
 
-    public Parastrike(ActionResolver actionResolver, GGSActionResolver ggsActionResolver) {
+    public Parastrike(ActionResolver actionResolver) {
         this.actionResolver = actionResolver;
-        this.ggsActionResolver = ggsActionResolver;
         instance = this;
     }
 
@@ -74,16 +64,13 @@ public class Parastrike extends Game implements ApplicationListener {
 
     @Override
     public void create() {
-        if (!Gdx.app.getPreferences(PREF_SETTINGS).getBoolean(DONT_ASK_TO_LOGIN, false)) {
-            ggsActionResolver.login();
-        }
         glProfiler = new GLProfiler(Gdx.graphics);
         playerStatsHandler = new PlayerStatsHandler();
         assetsManager = new AssetManagerWrapper();
         Gdx.app.setLogLevel(GameSettings.GDX_DEBUG_LEVEL);
         assetsManager.getLogger().setLevel(GameSettings.ASSET_MANAGER_DEBUG_LEVEL);
         soundPlayer = new SoundPlayer();
-        GameSettings.SOUND_TOGGLE = GameSettings.SOUND_TOGGLE ? Gdx.app.getPreferences(PREF_SETTINGS).getBoolean(SOUND, true) : false;
+        GameSettings.SOUND_TOGGLE = GameSettings.SOUND_TOGGLE && Gdx.app.getPreferences(PREF_SETTINGS).getBoolean(SOUND, true);
         Gdx.input.setCatchBackKey(true);
         if (GameSettings.TEST_MENU_ACTIVE) {
             goToTestMenu();
@@ -92,25 +79,12 @@ public class Parastrike extends Game implements ApplicationListener {
             goToMenuScreen(GameSettings.BEGIN_MENU_SCREEN);
         }
         actionResolver.StartSession();
-        reportEntry();
         if (GameSettings.GL_PROFILE_ENABLED) {
             glProfiler.enable();
             lastGLlog = System.currentTimeMillis();
         }
-        Preferences preferences = Gdx.app.getPreferences(PREF_SETTINGS);
-        long millis = TimeUtils.millis();
-        long lastEnabledTimeStamp = preferences.getLong(DAILY_GIFT_LAST_ENABLED, 0);
-        if (preferences.getBoolean(DAILY_GIFT_APPEAR, true) || millis > lastEnabledTimeStamp + Rules.Menu.Lobby.Gift.NEW_PASS_TIME_INTERVAL) {
-            preferences.putBoolean(DAILY_GIFT_APPEAR, true);
-            preferences.putLong(DAILY_GIFT_LAST_ENABLED, millis);
-            preferences.flush();
-        }
         mentorsManager = new MentorsManager();
         mentorsFactory = new MentorsFactory();
-    }
-
-    private void reportEntry() {
-        PlayerStatsHandler.reportEvent(Rules.System.Analytics.Events.ENTERED_GAME);
     }
 
     private void logGLvalues() {
@@ -158,9 +132,6 @@ public class Parastrike extends Game implements ApplicationListener {
         return soundPlayer;
     }
 
-    public static GGSActionResolver getGGS() {
-        return getInstance().ggsActionResolver;
-    }
 
     public static PlayerStatsHandler getPlayerStatsHandler() {
         return playerStatsHandler;
@@ -203,14 +174,14 @@ public class Parastrike extends Game implements ApplicationListener {
 
     public void goToBattleTest(BulletType weapon, SideKickFactory.SideKickType sidekicks, int sideKickArmor, int sideKickShootingRate, int sideKickStrength, int weaponShootingRate, int weaponStrength, int enemyLevel, int playerArmor, int generator) {
         WarScreen warScreen = new WarScreen();
-        HashMap<Bunker.PlayerAttributes, Object> playerAttributes = new HashMap<Bunker.PlayerAttributes, Object>();
+        HashMap<Bunker.PlayerAttributes, Object> playerAttributes = new HashMap<>();
         playerAttributes.put(Bunker.PlayerAttributes.ARMOR_LEVEL, playerArmor);
         playerAttributes.put(Bunker.PlayerAttributes.GENERATOR_LEVEL, generator);
         playerAttributes.put(Bunker.PlayerAttributes.SELECTED_WEAPON, weapon);
         playerAttributes.put(Bunker.PlayerAttributes.SHOOTING_RATE_LEVEL, weaponShootingRate);
         playerAttributes.put(Bunker.PlayerAttributes.STRENGTH_LEVEL, weaponStrength);
         warScreen.setPlayerAttributesForTest(playerAttributes);
-        HashMap<SideKick.SideKickAttributes, Object> sideKicksAttributes = new HashMap<SideKick.SideKickAttributes, Object>();
+        HashMap<SideKick.SideKickAttributes, Object> sideKicksAttributes = new HashMap<>();
         sideKicksAttributes.put(SideKick.SideKickAttributes.SELECTED_SIDEKICK, sidekicks);
         sideKicksAttributes.put(SideKick.SideKickAttributes.ARMOR_LEVEL, sideKickArmor);
         sideKicksAttributes.put(SideKick.SideKickAttributes.SHOOTING_RATE_LEVEL, sideKickShootingRate);

@@ -17,7 +17,6 @@ public final class Rules {
     public static final class Server {
 
         public static final String REQ_ID = "req_id";
-        public static final String DAILY_GIFT = "daily_gift";
         public static final String RESPONSE_VALUE_TRUE = "true";
         public static final String PASS = "pass";
     }
@@ -253,38 +252,6 @@ public final class Rules {
             public static final int GROUND_CRAFTS = 7;
         }
 
-        public final class Analytics {
-            public static final String ANALYTICS_KEY = "MKSFTN5S4PPX2GSVKYZ9";
-
-            public final class Events {
-                public static final String ENTERED_GAME = "entered_game";
-                public static final String CANNON_UPGRADE = "cannon_upgrade";
-                public static final String CANNON_PURCHASED = "cannon_purchased";
-                public static final String SIDE_KICK_PURCHASED = "side_kick_purchased";
-                public static final String BOMB_PURCHASED = "bomb_purchased";
-                public static final String LEVEL_BEGIN = "level_begin";
-                public static final String LEVEL_END = "level_end";
-                public static final String IN_GAME = "in_game";
-                public static final String USER_RATED = "user_rated";
-            }
-
-            public final class Attributes {
-                public final class MenuScreen {
-                    public static final String COINS = "coins";
-                    public static final String RATING = "rating";
-                }
-
-                public final class InGame {
-                    public static final String SELECTED_CANNON = "selected_cannon";
-                    public static final String SELECTED_SIDE_KICK = "selected_side_kick";
-                    public static final String LEVEL_NUMBER = "level_number";
-                    public static final String LEVEL_SKILL = "level_skill";
-                    public static final String SCORE = "score";
-                    public static final String STATE = "state";
-                }
-            }
-        }
-
         public final class Vibration {
             public static final int PAIN_VIBRATION_DURATION = 200;
             public static final int VIBRATION_INTERVALS = 10000;
@@ -328,7 +295,6 @@ public final class Rules {
                     public static final int MOUNTAINS = 96;
                     public static final int FOREST = 132;
                     public static final int DESERT = 160;
-                    public static final int BOSS = 180;
                 }
             }
 
@@ -1595,7 +1561,6 @@ public final class Rules {
 
         public final static class WelcomeScreen {
             public final static class VisitFacebookMonitor {
-                public static final float VISIT_FACEBOOK_MONITOR_DELAY = 2;
                 public static final float MONITOR_WIDTH = 800;
                 public static final float MONITOR_HEIGHT = 400;
                 public static final String MONITOR_NAME = "visit_monitor";
@@ -1710,7 +1675,6 @@ public final class Rules {
                 }
             }
 
-            public static final float BACK_Y_OFFSET = 375;
 
             public final static class SelectionMonitors {
                 public static final float WIDTH = 950;

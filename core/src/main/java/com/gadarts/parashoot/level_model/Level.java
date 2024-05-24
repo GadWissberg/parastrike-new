@@ -1,7 +1,6 @@
 package com.gadarts.parashoot.level_model;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.JsonValue;
@@ -12,7 +11,12 @@ import com.gadarts.parashoot.assets.AssetManagerWrapper;
 import com.gadarts.parashoot.assets.Assets;
 import com.gadarts.parashoot.assets.SFX;
 import com.gadarts.parashoot.enemies.Enemy;
-import com.gadarts.parashoot.model.*;
+import com.gadarts.parashoot.model.Factories;
+import com.gadarts.parashoot.model.HUD;
+import com.gadarts.parashoot.model.MessageDisplay;
+import com.gadarts.parashoot.model.PlayerStatsHandler;
+import com.gadarts.parashoot.model.ScoresHandler;
+import com.gadarts.parashoot.model.WarScreenElements;
 import com.gadarts.parashoot.model.object_factories.BonusFactory;
 import com.gadarts.parashoot.model.object_factories.EnemyFactory;
 import com.gadarts.parashoot.model.tutorial.Tutor;
@@ -27,38 +31,38 @@ public class Level {
 
     private final boolean forceCannonBall;
     private final Array<SFX.Misc> ambSounds;
-    private Queue<Event> events;
-    private String openingMessage;
-    private boolean playGoodLuckTaunt;
-    private String levelCompleteMessage;
-    private boolean featsAllowed;
-    private Scene scene;
-    private Array<OrnamentAppearance> ornaments;
-    private int landscapeIndex;
-    private boolean allowGain;
+    private final Queue<Event> events;
+    private final String openingMessage;
+    private final boolean playGoodLuckTaunt;
+    private final String levelCompleteMessage;
+    private final boolean featsAllowed;
+    private final Scene scene;
+    private final Array<OrnamentAppearance> ornaments;
+    private final int landscapeIndex;
+    private final boolean allowGain;
     private boolean showOptionsButton;
-    private boolean showBombsButton;
+    private final boolean showBombsButton;
     private String showOptionsButtonKey;
     private HUD hud;
     private final boolean showStatistics;
-    private String fileName;
-    private String name;
-    private Array<BonusFactory.BonusType> allowedBonuses = new Array<BonusFactory.BonusType>();
-    private Array<EnemyFactory.EnemyType> allowedParatroopers = new Array<EnemyFactory.EnemyType>();
-    private Array<EnemyAppearance> enemyAppearances;
+    private final String fileName;
+    private final String name;
+    private final Array<BonusFactory.BonusType> allowedBonuses = new Array<>();
+    private final Array<EnemyFactory.EnemyType> allowedParatroopers = new Array<>();
+    private final Array<EnemyAppearance> enemyAppearances;
     private int totalEnemies;
-    private Rules.Level.GlobalEffects.WeatherTypes weather;
-    private Rules.Level.GlobalEffects.SkyType sky;
+    private final Rules.Level.GlobalEffects.WeatherTypes weather;
+    private final Rules.Level.GlobalEffects.SkyType sky;
     private States state = States.PREPARING;
-    private Timer levelTimer = new Timer();
-    private SFX.Music music;
+    private final Timer levelTimer = new Timer();
+    private final SFX.Music music;
     private WarScreenElements elements;
     private Factories factories;
-    private HashMap<Feat, Boolean> feats = new HashMap<Feat, Boolean>();
+    private final HashMap<Feat, Boolean> feats = new HashMap<>();
 
     public Level(String fileName, String name, Array<EnemyAppearance> array, Object allowedBonuses, Rules.Level.GlobalEffects.SkyType sky, Rules.Level.GlobalEffects.WeatherTypes weather, Object allowedParatroopers, SFX.Music music, boolean showStatistics, Queue<Event> events, String openingMessage, boolean playGoodLuckTaunt, String levelCompleteMessage, boolean allowFeats, Scene scene, Array<OrnamentAppearance> ornaments, Array<SFX.Misc> ambSounds, int landscapeIndex, boolean allowGain, JsonValue showOptionsButton, boolean showBombsButton, boolean forceCannonBall) {
         PlayerStatsHandler playerStatsHandler = Parastrike.getPlayerStatsHandler();
-        featsAllowed = (playerStatsHandler.getLevelState(scene, playerStatsHandler.getSelectedLevel()) == LevelState.values()[LevelState.values().length - 1]) ? false : allowFeats;
+        featsAllowed = playerStatsHandler.getLevelState(scene, playerStatsHandler.getSelectedLevel()) != LevelState.values()[LevelState.values().length - 1] && allowFeats;
         this.landscapeIndex = landscapeIndex;
         this.levelCompleteMessage = levelCompleteMessage;
         this.allowGain = allowGain;
@@ -209,16 +213,15 @@ public class Level {
         }
         PlayerStatsHandler playerStatsHandler = Parastrike.getPlayerStatsHandler();
         Scene selectedScene = playerStatsHandler.getSelectedScene();
-        Scene currentScene = selectedScene;
         int currentLevel = playerStatsHandler.getSelectedLevel();
-        LevelState state = playerStatsHandler.getLevelState(currentScene, currentLevel);
+        LevelState state = playerStatsHandler.getLevelState(selectedScene, currentLevel);
         LevelState[] states = LevelState.values();
         int currentStateOrdinal = state.ordinal();
         Scene[] scenes = Scene.values();
-        int currentSceneIndex = currentScene.ordinal();
+        int currentSceneIndex = selectedScene.ordinal();
         if (currentStateOrdinal < states.length - 1) {
             int newLevelStarsStateIndex = currentStateOrdinal + 1;
-            playerStatsHandler.setLevelState(currentScene, currentLevel, states[newLevelStarsStateIndex]);
+            playerStatsHandler.setLevelState(selectedScene, currentLevel, states[newLevelStarsStateIndex]);
             playerStatsHandler.setStars(playerStatsHandler.getStars() + 1);
             ScoresHandler scoresHandler = getElements().getScoresHandler();
             int starCoinsReward = (Rules.Level.BASIC_LEVEL_STAR_COINS_WORTH * (newLevelStarsStateIndex - 1)) * (currentSceneIndex + 1);
@@ -226,24 +229,24 @@ public class Level {
             int nextLevel = currentLevel + 1;
             AssetManagerWrapper assetsManager = Parastrike.getAssetsManager();
             int numOfLevelsInScene = assetsManager.calculateNumberOfLevelsInScene(selectedScene);
-            if (currentLevel < numOfLevelsInScene && playerStatsHandler.getLevelState(currentScene, nextLevel) == LevelState.LOCKED) {
-                playerStatsHandler.setLevelState(currentScene, nextLevel, LevelState.NO_STARS);
+            if (currentLevel < numOfLevelsInScene && playerStatsHandler.getLevelState(selectedScene, nextLevel) == LevelState.LOCKED) {
+                playerStatsHandler.setLevelState(selectedScene, nextLevel, LevelState.NO_STARS);
             } else {
                 boolean sceneCompleted = true;
                 for (int i = 1; i <= numOfLevelsInScene; i++) {
                     LevelState[] levelStates = LevelState.values();
-                    if (playerStatsHandler.getLevelState(currentScene, i) != levelStates[levelStates.length - 1]) {
+                    if (playerStatsHandler.getLevelState(selectedScene, i) != levelStates[levelStates.length - 1]) {
                         sceneCompleted = false;
                         break;
                     }
                 }
                 if (sceneCompleted) {
-                    elements.sceneCompleted(currentScene);
+                    elements.sceneCompleted(selectedScene);
                     playerStatsHandler.setCoins(playerStatsHandler.getCoins() + Rules.Menu.LevelSelection.SceneCompletedMonitor.REWARD);
                 }
             }
         }
-        if (scenes[scenes.length - 1] != currentScene) {
+        if (scenes[scenes.length - 1] != selectedScene) {
             for (Scene scene : Scene.values()) {
                 if (!playerStatsHandler.isSceneEnabled(scene)) {
                     if (scene.getCoinsTarget() <= playerStatsHandler.getCoins() && scene.getStarsTarget() <= playerStatsHandler.getStars()) {
@@ -413,9 +416,6 @@ public class Level {
         levelTimer.start();
     }
 
-    public void end() {
-        reportLevelEnd(getState());
-    }
 
     public Rules.Level.GlobalEffects.SkyType getSky() {
         return sky;
@@ -465,7 +465,6 @@ public class Level {
             tauntGoodLuck();
             state = States.RUNNING;
             levelTimer.scheduleTask(TASK_GENERATE_ENEMY, enemyAppearances.first().getTiming());
-            reportLevelBegin();
         }
 
         private void tauntGoodLuck() {
@@ -476,30 +475,6 @@ public class Level {
             }
         }
     };
-
-    private void reportLevelBegin() {
-        Preferences prefs = Gdx.app.getPreferences(Assets.Configs.Preferences.Player.PREF_PLAYER);
-        HashMap<String, String> attributes = new HashMap<String, String>();
-        attributes.put(Rules.System.Analytics.Attributes.MenuScreen.COINS, String.valueOf(prefs.getInteger(Assets.Configs.Preferences.Player.COINS)));
-        attributes.put(Rules.System.Analytics.Attributes.InGame.SELECTED_CANNON, prefs.getString(Assets.Configs.Preferences.Player.SELECTED_CANNON));
-        attributes.put(Rules.System.Analytics.Attributes.InGame.SELECTED_SIDE_KICK, prefs.getString(Assets.Configs.Preferences.Player.SELECTED_SIDE_KICK));
-        attributes.put(Rules.System.Analytics.Attributes.InGame.LEVEL_NUMBER, String.valueOf(Parastrike.getPlayerStatsHandler().getSelectedLevel()));
-        attributes.put(Rules.System.Analytics.Attributes.InGame.LEVEL_SKILL, Parastrike.getPlayerStatsHandler().getSelectedLevelSkill().name());
-        Parastrike.getInstance().actionResolver.analyticsEventReport(Rules.System.Analytics.Events.LEVEL_BEGIN, attributes);
-    }
-
-    private void reportLevelEnd(States state) {
-        Preferences prefs = Gdx.app.getPreferences(Assets.Configs.Preferences.Player.PREF_PLAYER);
-        HashMap<String, String> attributes = new HashMap<String, String>();
-        attributes.put(Rules.System.Analytics.Attributes.MenuScreen.COINS, String.valueOf(prefs.getInteger(Assets.Configs.Preferences.Player.COINS)));
-        attributes.put(Rules.System.Analytics.Attributes.InGame.SELECTED_CANNON, prefs.getString(Assets.Configs.Preferences.Player.SELECTED_CANNON));
-        attributes.put(Rules.System.Analytics.Attributes.InGame.SELECTED_SIDE_KICK, prefs.getString(Assets.Configs.Preferences.Player.SELECTED_SIDE_KICK));
-        attributes.put(Rules.System.Analytics.Attributes.InGame.LEVEL_NUMBER, String.valueOf(Parastrike.getPlayerStatsHandler().getSelectedLevel()));
-        attributes.put(Rules.System.Analytics.Attributes.InGame.LEVEL_SKILL, Parastrike.getPlayerStatsHandler().getSelectedLevelSkill().name());
-        attributes.put(Rules.System.Analytics.Attributes.InGame.SCORE, String.valueOf(elements.getScoresHandler().getSessionScore()));
-        attributes.put(Rules.System.Analytics.Attributes.InGame.STATE, state.name());
-        Parastrike.getInstance().actionResolver.analyticsEventReport(Rules.System.Analytics.Events.LEVEL_END, attributes);
-    }
 
     public WarScreenElements getElements() {
         return elements;
@@ -514,7 +489,6 @@ public class Level {
                 elements.endBattle();
             }
             Parastrike.getPlayerStatsHandler().commitStats();
-            Parastrike.getGGS().submitScore(Parastrike.getPlayerStatsHandler().getScore());
         }
     };
 

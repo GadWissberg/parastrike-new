@@ -43,7 +43,8 @@ public class SceneSelectionScreen extends MenuScreenImproved {
         Scene[] scenes = Scene.values();
         int selectedSceneIndex;
         for (selectedSceneIndex = scenes.length - 1; selectedSceneIndex >= 0; selectedSceneIndex--)
-            if (Parastrike.getPlayerStatsHandler().isSceneEnabled(scenes[selectedSceneIndex])) break;
+            if (Parastrike.getPlayerStatsHandler().isSceneEnabled(scenes[selectedSceneIndex]))
+                break;
         scrollToSpecificScene(selectedSceneIndex);
     }
 
@@ -176,8 +177,7 @@ public class SceneSelectionScreen extends MenuScreenImproved {
 
     private Stack createLockedSceneContent(Scene scene) {
         Table table = createLockedSceneTable(scene);
-        CoinsButton coinsButton = createCoinsButton();
-        Stack stack = new Stack(table, coinsButton);
+        Stack stack = new Stack(table);
         return stack;
     }
 
@@ -187,13 +187,6 @@ public class SceneSelectionScreen extends MenuScreenImproved {
         createLockedSceneMonitorText(table, style);
         createLockedSceneMonitorRequirementsLabels(scene, table, style);
         return table;
-    }
-
-    private CoinsButton createCoinsButton() {
-        Skin skin = getSkin();
-        CoinsButton coinsButton = new CoinsButton(skin);
-        coinsButton.right().bottom();
-        return coinsButton;
     }
 
     private void createLockedSceneMonitorRequirementsLabels(Scene scene, Table table, Label.LabelStyle style) {

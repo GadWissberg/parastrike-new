@@ -153,9 +153,9 @@ public class ShopScreenImproved extends MenuScreenImproved {
     private void addRegularSmallFontsToSkin() {
         Skin skin = getSkin();
         skin.add(Rules.System.FontsParameters.RegularFontNames.SMALL, new Label.LabelStyle(Parastrike.getAssetsManager().get(Rules.System.FontsParameters.RegularFontNames.SMALL, BitmapFont.class), Color.GOLD));
-        skin.add(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.GREEN.toString(), new Label.LabelStyle(Parastrike.getAssetsManager().get(Rules.System.FontsParameters.RegularFontNames.SMALL, BitmapFont.class), Color.GREEN));
-        skin.add(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.RED.toString(), new Label.LabelStyle(Parastrike.getAssetsManager().get(Rules.System.FontsParameters.RegularFontNames.SMALL, BitmapFont.class), Color.RED));
-        skin.add(Rules.System.FontsParameters.RegularFontNames.MEDIUM + Color.RED.toString(), new Label.LabelStyle(Parastrike.getAssetsManager().get(Rules.System.FontsParameters.RegularFontNames.MEDIUM, BitmapFont.class), Color.RED));
+        skin.add(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.GREEN, new Label.LabelStyle(Parastrike.getAssetsManager().get(Rules.System.FontsParameters.RegularFontNames.SMALL, BitmapFont.class), Color.GREEN));
+        skin.add(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.RED, new Label.LabelStyle(Parastrike.getAssetsManager().get(Rules.System.FontsParameters.RegularFontNames.SMALL, BitmapFont.class), Color.RED));
+        skin.add(Rules.System.FontsParameters.RegularFontNames.MEDIUM + Color.RED, new Label.LabelStyle(Parastrike.getAssetsManager().get(Rules.System.FontsParameters.RegularFontNames.MEDIUM, BitmapFont.class), Color.RED));
     }
 
     private void createTopRightTable() {
@@ -176,7 +176,6 @@ public class ShopScreenImproved extends MenuScreenImproved {
         currentCoinsLabel = new Label(Integer.toString(Parastrike.getPlayerStatsHandler().getCoins()), skin.get(Rules.System.FontsParameters.DigitalFontNames.SMALL, Label.LabelStyle.class));
         currentCoinsLabel.setAlignment(Align.center);
         topRightTable.add(currentCoinsLabel).width(200).row();
-        topRightTable.add(new CoinsButton(skin)).colspan(2);
     }
 
     private WidgetGroup createMonitorContent() {
@@ -203,8 +202,7 @@ public class ShopScreenImproved extends MenuScreenImproved {
     }
 
     private Table createCategoryItems(Category category) {
-        CategoryItems categoryItems = createCategoryItemsTable(category);
-        return categoryItems;
+        return createCategoryItemsTable(category);
     }
 
     private CategoryItems createCategoryItemsTable(Category category) {
@@ -215,7 +213,7 @@ public class ShopScreenImproved extends MenuScreenImproved {
 
 
     private ButtonGroup<CategoryItemButton> createItemsGroup() {
-        ButtonGroup<CategoryItemButton> buttonGroup = new ButtonGroup<CategoryItemButton>();
+        ButtonGroup<CategoryItemButton> buttonGroup = new ButtonGroup<>();
         buttonGroup.setMinCheckCount(1);
         buttonGroup.setMaxCheckCount(1);
         return buttonGroup;
@@ -518,7 +516,7 @@ public class ShopScreenImproved extends MenuScreenImproved {
         }
 
         private void createPurchaseAdditionalLabel() {
-            purchaseAdditionalLabel = new Label("", getSkin().get(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.RED.toString(), Label.LabelStyle.class));
+            purchaseAdditionalLabel = new Label("", getSkin().get(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.RED, Label.LabelStyle.class));
             purchaseAdditionalLabel.setWrap(true);
             purchaseAdditionalLabel.setAlignment(Align.center);
             purchaseTable.add(purchaseAdditionalLabel).padTop(Rules.Menu.ShopScreenImproved.Monitor.PURCHASE_ADDITIONAL_LABEL_PADDING_TOP).row();
@@ -552,7 +550,6 @@ public class ShopScreenImproved extends MenuScreenImproved {
                     int minGeneratorReq = ((BulletType) ShopScreenImproved.this.selectedItem).getMinGeneratorReq();
                     if ((Parastrike.getPlayerStatsHandler().getBunkerGeneratorLevel() / 10) + 1 >= minGeneratorReq) {
                         updateCannonStats();
-                        purchaseSuccess(Rules.System.Analytics.Events.CANNON_PURCHASED);
                         Parastrike.getMentorsManager().readyMentorIfDidntRun(CHANGE_CANNON);
                     } else
                         showError(String.format(ShopImproved.Monitor.UPGRADE_GEN, minGeneratorReq));
@@ -561,20 +558,16 @@ public class ShopScreenImproved extends MenuScreenImproved {
                 private void purchaseSuccess(String event) {
                     refresh();
                     Parastrike.getSoundPlayer().playSound(SFX.Menu.SYSTEM_CONFIRM, false, false);
-                    PlayerStatsHandler.reportEvent(event);
-                    Parastrike.getGGS().setShouldSaveGame(true);
                     currentCoinsLabel.setText(Integer.toString(Parastrike.getPlayerStatsHandler().getCoins()));
                     createHoorayEffect(SFX.Menu.CANNON_PURCHASED);
                 }
 
                 private void purchaseSideKick() {
                     updateSideKickStats();
-                    purchaseSuccess(Rules.System.Analytics.Events.SIDE_KICK_PURCHASED);
                 }
 
                 private void purchaseArmory() {
                     updateArmoryStats();
-                    purchaseSuccess(Rules.System.Analytics.Events.BOMB_PURCHASED);
                 }
 
                 private void updateCannonStats() {
@@ -870,7 +863,7 @@ public class ShopScreenImproved extends MenuScreenImproved {
             }
 
             private void addConfirmation() {
-                confirmationLabel = new Label(null, getSkin().get(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.GREEN.toString(), Label.LabelStyle.class));
+                confirmationLabel = new Label(null, getSkin().get(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.GREEN, Label.LabelStyle.class));
                 confirmationLabel.setVisible(false);
                 confirmationLabel.setWrap(true);
                 confirmationLabel.setAlignment(Align.center);
@@ -965,7 +958,7 @@ public class ShopScreenImproved extends MenuScreenImproved {
                 public void setAttribute(Rules.Player.UpgradeableAttribute attribute) {
                     super.setAttribute(attribute);
                     label.setText(String.format(ShopImproved.Monitor.YOU_HAVE, attributeValue, getAttribute().getMaxValue()));
-                    label.setStyle(attributeValue == 0 ? getSkin().get(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.RED.toString(), Label.LabelStyle.class) : getSkin().get(Rules.System.FontsParameters.RegularFontNames.SMALL, Label.LabelStyle.class));
+                    label.setStyle(attributeValue == 0 ? getSkin().get(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.RED, Label.LabelStyle.class) : getSkin().get(Rules.System.FontsParameters.RegularFontNames.SMALL, Label.LabelStyle.class));
                 }
             }
 
@@ -1058,7 +1051,6 @@ public class ShopScreenImproved extends MenuScreenImproved {
 
                         private void purchasedSuccess() {
                             Parastrike.getSoundPlayer().playSound(SFX.Menu.SYSTEM_CONFIRM, false, false);
-                            Parastrike.getGGS().setShouldSaveGame(true);
                             PlayerStatsHandler playerStatsHandler = Parastrike.getPlayerStatsHandler();
                             playerStatsHandler.setCoins(playerStatsHandler.getCoins() - priceValue, true);
                             refreshUi();
@@ -1192,7 +1184,7 @@ public class ShopScreenImproved extends MenuScreenImproved {
         }
 
         private void createLabel() {
-            label = new Label("", getSkin().get(Rules.System.FontsParameters.RegularFontNames.MEDIUM + Color.RED.toString(), Label.LabelStyle.class));
+            label = new Label("", getSkin().get(Rules.System.FontsParameters.RegularFontNames.MEDIUM + Color.RED, Label.LabelStyle.class));
             label.setWrap(true);
             label.setAlignment(Align.center);
             add(label).width(Rules.Menu.ShopScreenImproved.Monitor.MAIN_CONTENT_TEXT_WIDTH).padTop(Rules.Menu.ShopScreenImproved.Monitor.ERROR_MESSAGE_PADDING_TOP);

@@ -28,13 +28,6 @@ class ActionResolverAndroid implements ActionResolver {
     }
 
     @Override
-    public void analyticsEventReport(String eventName, HashMap<String, String> attributes) {
-        if (GameSettings.ALLOW_ANALYTICS) {
-            Gdx.app.log("Analytics Log", eventName);
-        }
-    }
-
-    @Override
     public void StartSession() {
     }
 
@@ -54,12 +47,6 @@ class ActionResolverAndroid implements ActionResolver {
     @Override
     public void toast(String message) {
         androidLauncher.toast(message);
-    }
-
-    @Override
-    public void openUrl(String url) {
-        final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        androidLauncher.startActivity(intent);
     }
 
     @Override

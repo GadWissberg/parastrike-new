@@ -19,14 +19,6 @@ import com.gadarts.parashoot.utils.GameSettings;
  * Launches the Android application.
  */
 public class AndroidLauncher extends AndroidApplication {
-    public static final int RC_SIGN_IN = 9001;
-    public static final int RC_UNUSED = 5001;
-
-
-    /**
-     * Action resolver for the GGS.
-     */
-    private GGSActionResolverImplementation ggsActionResolver;
 
     /**
      * Handler for the IAB.
@@ -38,8 +30,7 @@ public class AndroidLauncher extends AndroidApplication {
         super.onCreate(savedInstanceState);
         AndroidApplicationConfiguration config = createAppConfig();
         ActionResolverAndroid actionResolver = new ActionResolverAndroid(this);
-        initializeGGS();
-        final Parastrike main = new Parastrike(actionResolver, ggsActionResolver);
+        final Parastrike main = new Parastrike(actionResolver);
         initializeIab();
         initialize(main, config);
         InitializeAdMob(config, main);
@@ -77,20 +68,12 @@ public class AndroidLauncher extends AndroidApplication {
     /**
      * Sets the app to use device's features.
      *
-     * @return The config object.
      */
     private void setAppUseConfig(AndroidApplicationConfiguration config) {
         config.useAccelerometer = false;
         config.useCompass = false;
         config.useWakelock = true;
         config.useImmersiveMode = true;
-    }
-
-    /**
-     * Initializes the Google Games Service.
-     */
-    private void initializeGGS() {
-        createGGS();
     }
 
     @Override
@@ -103,20 +86,9 @@ public class AndroidLauncher extends AndroidApplication {
         }
     }
 
-    /**
-     * Creates the Google Games Service object and it's action resolver.
-     */
-    private void createGGS() {
-        if (ggsActionResolver == null) {
-            ggsActionResolver = new GGSActionResolverImplementation(this, iabHandler);
-        }
-    }
-
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        ggsActionResolver.onActivityResult(requestCode, data);
         iabHandler.handleActivityResult(requestCode, resultCode, data);
     }
 
@@ -139,18 +111,12 @@ public class AndroidLauncher extends AndroidApplication {
      * @param text The message to show.
      */
     private void toastForWorkerThread(final String text) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(getBaseContext(), text, Toast.LENGTH_LONG).show();
-            }
-        });
+        runOnUiThread(() -> Toast.makeText(getBaseContext(), text, Toast.LENGTH_LONG).show());
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        ggsActionResolver.signInSilently();
     }
 
 }

@@ -534,13 +534,11 @@ public class WarScreen extends BasicScreen {
     }
 
     public void endBattle() {
-        elements.getCurrentLevel().end();
         returnToMenu();
     }
 
 
     private void returnToMenu() {
-        Parastrike.getGGS().setShouldSaveGame(true);
         closeDoorsAndGoToScreen(new Timer.Task() {
             @Override
             public void run() {

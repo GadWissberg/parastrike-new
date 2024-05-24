@@ -5,12 +5,17 @@ import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.ui.*;
+import com.badlogic.gdx.scenes.scene2d.ui.Button;
+import com.badlogic.gdx.scenes.scene2d.ui.ButtonGroup;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.WidgetGroup;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.gadarts.parashoot.Parastrike;
 import com.gadarts.parashoot.assets.Assets;
-import com.gadarts.parashoot.model.GGSActionResolver;
 import com.gadarts.parashoot.screens.MenuScreenImproved;
 import com.gadarts.parashoot.utils.GameSettings;
 import com.gadarts.parashoot.utils.Rules;
@@ -21,8 +26,6 @@ import com.gadarts.parashoot.utils.Rules;
 
 public class OptionsScreen extends MenuScreenImproved {
 
-    private Button autoSaveButton;
-    private Button loadButton;
 
     public OptionsScreen() {
         super(true, Assets.GFX.Sheets.Menus.OPTIONS_BUTTONS_DATA_FILE);
@@ -67,9 +70,6 @@ public class OptionsScreen extends MenuScreenImproved {
 
     private void createGeneralOptions(Table optionsTable, Label.LabelStyle style) {
         createHeader(new Label.LabelStyle(Parastrike.getAssetsManager().get(Rules.System.FontsParameters.RegularFontNames.MEDIUM, BitmapFont.class), Color.GOLD), optionsTable, Assets.Strings.Menu.Options.GENERAL);
-        createOptionForGoogleGames(style, optionsTable);
-        createOptionForAutoSaving(style, optionsTable);
-        createOptionForLoading(style, optionsTable);
         createOptionForRestart(optionsTable, style);
     }
 
@@ -86,104 +86,6 @@ public class OptionsScreen extends MenuScreenImproved {
         button.addListener(defineToggleOptionClick(Assets.Configs.Preferences.Settings.EPILEPSY, true));
         button.setChecked(Gdx.app.getPreferences(Assets.Configs.Preferences.Settings.PREF_SETTINGS).getBoolean(Assets.Configs.Preferences.Settings.EPILEPSY, true));
         createOption(style, button, Assets.Strings.Menu.Options.EPILEPSY, optionsTable);
-    }
-
-    private void createOptionForAutoSaving(Label.LabelStyle style, Table optionsTable) {
-        Skin skin = getSkin();
-        autoSaveButton = new Button(skin.getDrawable(Assets.GFX.Sheets.ImagesNames.OPTIONS_CLOUDSAVE), skin.getDrawable(Assets.GFX.Sheets.ImagesNames.OPTIONS_CLOUDSAVE_PRESSED), skin.getDrawable(Assets.GFX.Sheets.ImagesNames.OPTIONS_CLOUDSAVE_CHECKED));
-        autoSaveButton.getStyle().disabled = skin.getDrawable(Assets.GFX.Sheets.ImagesNames.OPTIONS_CLOUDSAVE_DISABLED);
-        autoSaveButton.addListener(defineAutoSaveClick());
-        initializeCloudButtonState(autoSaveButton, Assets.Configs.Preferences.Settings.AUTO_CLOUD_SAVING);
-        createOption(style, autoSaveButton, Assets.Strings.Menu.Options.CLOUD_SAVE, optionsTable);
-    }
-
-    private void createOptionForLoading(Label.LabelStyle style, Table optionsTable) {
-        Skin skin = getSkin();
-        loadButton = new Button(skin.getDrawable(Assets.GFX.Sheets.ImagesNames.OPTIONS_CLOUDLOAD), skin.getDrawable(Assets.GFX.Sheets.ImagesNames.OPTIONS_CLOUDLOAD_PRESSED));
-        loadButton.getStyle().disabled = skin.getDrawable(Assets.GFX.Sheets.ImagesNames.OPTIONS_CLOUDLOAD_DISABLED);
-        loadButton.addListener(defineLoadClick());
-        loadButton.setDisabled(!Parastrike.getGGS().isSignedIn());
-        createOption(style, loadButton, Assets.Strings.Menu.Options.CLOUD_LOAD, optionsTable);
-    }
-
-    private ClickListener defineAutoSaveClick() {
-        return new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                super.clicked(event, x, y);
-                Preferences preferences = Gdx.app.getPreferences(Assets.Configs.Preferences.Settings.PREF_SETTINGS);
-                boolean currentValue = preferences.getBoolean(Assets.Configs.Preferences.Settings.AUTO_CLOUD_SAVING, true);
-                preferences.putBoolean(Assets.Configs.Preferences.Settings.AUTO_CLOUD_SAVING, !currentValue);
-                preferences.flush();
-            }
-        };
-    }
-
-    private ClickListener defineLoadClick() {
-        return new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                super.clicked(event, x, y);
-                String monitorName = Rules.Menu.Options.Monitor.LOAD_CONFIRMATION_MONITOR_NAME;
-                createMonitor(createConfirmationTable(Assets.Strings.Menu.Options.LOAD_CONFIRMATION, OptionsScreen.this.createConfirmationNoClick(monitorName), createYesConfirmationClick(monitorName)), Rules.Menu.Options.Monitor.CONFIRMATION_MONITOR_WIDTH, Rules.Menu.Options.Monitor.CONFIRMATION_MONITOR_HEIGHT, Rules.System.Resolution.HEIGHT_TARGET_RESOLUTION / 2, true, true, true, null, monitorName);
-            }
-
-            private ButtonClickImproved createYesConfirmationClick(final String name) {
-                return new ButtonClickImproved() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        super.clicked(event, x, y);
-                        Parastrike.getGGS().loadFromSnapshot();
-                        getMonitors().get(name).setActivation(false);
-                    }
-                };
-            }
-        };
-    }
-
-    private void initializeCloudButtonState(Button button, String prefKey) {
-        if (Parastrike.getGGS().isSignedIn()) {
-            button.setChecked(Gdx.app.getPreferences(Assets.Configs.Preferences.Settings.PREF_SETTINGS).getBoolean(prefKey, true));
-        } else {
-            button.setChecked(false);
-            button.setDisabled(true);
-        }
-    }
-
-    private void createOptionForGoogleGames(Label.LabelStyle style, Table optionsTable) {
-        Button button = new Button(getSkin().getDrawable(Assets.GFX.Sheets.ImagesNames.OPTIONS_GOOGLE_GAMES), getSkin().getDrawable(Assets.GFX.Sheets.ImagesNames.OPTIONS_GOOGLE_GAMES_PRESSED), getSkin().getDrawable(Assets.GFX.Sheets.ImagesNames.OPTIONS_GOOGLE_GAMES_CHECKED));
-        Preferences preferences = Gdx.app.getPreferences(Assets.Configs.Preferences.Settings.PREF_SETTINGS);
-        boolean checked = Parastrike.getGGS().isSignedIn();
-        preferences.putBoolean(Assets.Configs.Preferences.Settings.GOOGLE_GAMES, checked);
-        preferences.flush();
-        button.setChecked(checked);
-        createOption(style, button, Assets.Strings.Menu.Options.GOOGLE_GAMES, optionsTable);
-        button.addListener(defineGoogleGamesClick());
-    }
-
-    private ButtonClickImproved defineGoogleGamesClick() {
-        return new ButtonClickImproved() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                super.clicked(event, x, y);
-                Preferences preferences = Gdx.app.getPreferences(Assets.Configs.Preferences.Settings.PREF_SETTINGS);
-                String key = Assets.Configs.Preferences.Settings.GOOGLE_GAMES;
-                boolean newValue = !preferences.getBoolean(key, true);
-                toggleSign(newValue);
-                preferences.putBoolean(key, newValue).flush();
-            }
-
-            private void toggleSign(boolean newValue) {
-                GGSActionResolver ggs = Parastrike.getGGS();
-                if (newValue) ggs.login();
-                else ggs.logout();
-                autoSaveButton.setDisabled(!newValue);
-                if (newValue) {
-                    autoSaveButton.setChecked(Gdx.app.getPreferences(Assets.Configs.Preferences.Settings.PREF_SETTINGS).getBoolean(Assets.Configs.Preferences.Settings.AUTO_CLOUD_SAVING, true));
-                }
-                loadButton.setDisabled(!newValue);
-            }
-        };
     }
 
     private void createOptionForVibration(Table optionsTable, Label.LabelStyle style) {
