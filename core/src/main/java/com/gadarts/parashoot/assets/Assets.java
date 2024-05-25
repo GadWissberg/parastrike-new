@@ -649,7 +649,6 @@ public final class Assets {
     }
 
     public static final class Strings {
-        public static final String PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz8KwbcSekZu7IL59NdyyXJW2ftt7wSwddo8E+/S1+huwEama7Byj1tsesP9IUi1jPptYfvaDmnkjFrMgimPh8F2lDix2+S/wpv7tzRHmmae5EbLo9vTwCQFqifpYjtyKf33HRqIXEIsvulevY+bgQA8JIUdD7IOOIChZ/a1+aGa2lLTxJX01mwYINbtlxzZtM9Y61GsChQAuVEqJjtHl74DJyTQmZeP2AfzUIL4XFxKoAonckGJ677LcPOz/FKXYTFUR6iwbu3e7FnsQT3cBHNUPPIp46bnW97a9y8VhWduDFIq+gMByaGI2/s+lSyGKl13ggzOG90SQWd1lnbVxPQIDAQAB";
 
 
         public static final class Menu {

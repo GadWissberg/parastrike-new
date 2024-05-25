@@ -25,26 +25,23 @@ import static com.gadarts.parashoot.assets.Assets.Configs.ParticleEffects.SMALL_
  */
 public abstract class AirCraft extends Enemy {
 
+    private static final Color auxColor = new Color();
     /**
      * The interval between paratrooper release.
      */
     protected float paratrooperReleaseDelay;
-
-    /**
-     * This AC's id of it's crash sound. -1 if it doesn't have a crash sound.
-     */
-    private long crashSoundId;
-
-    /**
-     * This AC's file name of it's crash sound. PLANE_CRASH on default.
-     */
-    private SFX crashSoundFileName = SFX.Enemies.AirCrafts.PLANE_CRASH;
-
     /**
      * This AC's image direction delta in crash (degrees). CRASH_DEGREES_CHANGE on default.
      */
     protected float crashDegreesChange = Rules.Enemies.AirCrafts.CRASH_DEGREES_CHANGE;
-
+    /**
+     * This AC's id of it's crash sound. -1 if it doesn't have a crash sound.
+     */
+    private long crashSoundId;
+    /**
+     * This AC's file name of it's crash sound. PLANE_CRASH on default.
+     */
+    private SFX crashSoundFileName = SFX.Enemies.AirCrafts.PLANE_CRASH;
     /**
      * A flag to indicate whether this AC has already generated a bonus.
      */
@@ -224,7 +221,7 @@ public abstract class AirCraft extends Enemy {
      */
     protected void drawColoredSprite(SpriteBatch batch, Color color) {
         if (currentFrame != null && isVisible()) {
-            Color originalColor = batch.getColor();
+            Color originalColor = auxColor.set(batch.getColor());
             batch.setColor(color);
             batch.draw(currentFrame, x - getOriginX(), y - getOriginY(), getOriginX(), getOriginY(), currentFrame.getRegionWidth(), currentFrame.getRegionHeight(), scaleX, scaleY, getSpriteDirection());
             batch.setColor(originalColor);

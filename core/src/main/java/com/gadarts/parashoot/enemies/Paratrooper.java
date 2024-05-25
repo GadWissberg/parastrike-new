@@ -354,6 +354,7 @@ public abstract class Paratrooper extends GroundUnit {
             setRegion(Assets.GFX.Sheets.ImagesNames.FALLING);
             landed = false;
             setDeadFlag(true);
+            onGib();
         } else {
             gravityStatus = true;
             if (isParachuteActive()) {
@@ -395,8 +396,6 @@ public abstract class Paratrooper extends GroundUnit {
     @Override
     protected void onGib() {
         super.onGib();
-//        int numberOfBodyParts = randomizer.nextInt(Rules.Enemies.Paratroopers.GeneralAttributes.MAX_NUMBER_OF_BODY_PARTS) + 1;
-//        createFlyingParts(Rules.GameObjectIds.BODY_PART, x, y, numberOfBodyParts);
         Parastrike.getSoundPlayer().playSound(SFX.Misc.GIB);
         getFactories().getMiscFactory().createIndependentEffect(MiscFactory.IndependentEffectType.STARS, x, y - (height / 2));
         tearParachute();

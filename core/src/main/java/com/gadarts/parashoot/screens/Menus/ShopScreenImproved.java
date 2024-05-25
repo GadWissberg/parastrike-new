@@ -517,7 +517,7 @@ public class ShopScreenImproved extends MenuScreenImproved {
 
         private void createPurchaseAdditionalLabel() {
             purchaseAdditionalLabel = new Label("", getSkin().get(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.RED, Label.LabelStyle.class));
-            purchaseAdditionalLabel.setWrap(true);
+            purchaseAdditionalLabel.setWrap(false);
             purchaseAdditionalLabel.setAlignment(Align.center);
             purchaseTable.add(purchaseAdditionalLabel).padTop(Rules.Menu.ShopScreenImproved.Monitor.PURCHASE_ADDITIONAL_LABEL_PADDING_TOP).row();
         }
@@ -865,7 +865,7 @@ public class ShopScreenImproved extends MenuScreenImproved {
             private void addConfirmation() {
                 confirmationLabel = new Label(null, getSkin().get(Rules.System.FontsParameters.RegularFontNames.SMALL + Color.GREEN, Label.LabelStyle.class));
                 confirmationLabel.setVisible(false);
-                confirmationLabel.setWrap(true);
+                confirmationLabel.setWrap(false);
                 confirmationLabel.setAlignment(Align.center);
                 upgradersTable.add(confirmationLabel).colspan(4).width(upgradersTable.getWidth()).height(0).padBottom(Rules.Menu.ShopScreenImproved.Monitor.UPGRADER_PADDING_BOTTOM).padTop(Rules.Menu.ShopScreenImproved.Monitor.UPGRADER_CONFIRM_PADDING_TOP);
             }

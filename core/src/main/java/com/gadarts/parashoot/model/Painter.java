@@ -119,9 +119,9 @@ public class Painter {
                 color.g = (color.g > MINIMAL_BRIGHTNESS.g + fadeBrightnessPace) ? color.g + fadeBrightnessPace : MINIMAL_BRIGHTNESS.g;
                 color.b = (color.b > MINIMAL_BRIGHTNESS.b + fadeBrightnessPace) ? color.b + fadeBrightnessPace : MINIMAL_BRIGHTNESS.b;
             } else {
-                color.r = (color.r < colorBeforeFade.r - fadeBrightnessPace) ? color.r + fadeBrightnessPace : currentColor.r;
-                color.g = (color.g < colorBeforeFade.g - fadeBrightnessPace) ? color.g + fadeBrightnessPace : currentColor.g;
-                color.b = (color.b < colorBeforeFade.b - fadeBrightnessPace) ? color.b + fadeBrightnessPace : currentColor.b;
+                color.r = (color.r < Color.WHITE.r - fadeBrightnessPace) ? color.r + fadeBrightnessPace : Color.WHITE.r;
+                color.g = (color.g < Color.WHITE.g - fadeBrightnessPace) ? color.g + fadeBrightnessPace : Color.WHITE.g;
+                color.b = (color.b < Color.WHITE.b - fadeBrightnessPace) ? color.b + fadeBrightnessPace : Color.WHITE.b;
             }
             if (color.equals(colorBeforeFade) || color.equals(MINIMAL_BRIGHTNESS)) {
                 fadeBrightnessPace = 0;

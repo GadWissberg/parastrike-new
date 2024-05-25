@@ -30,7 +30,6 @@ public class GameSettings {
     public static final boolean SHOW_TABLES_LINES = false;
     public static final int GDX_DEBUG_LEVEL = Application.LOG_DEBUG;
     public static final int ASSET_MANAGER_DEBUG_LEVEL = Application.LOG_ERROR;
-    public static final boolean ALLOW_IAP_DEBUG = false;
     public static final boolean SHOW_SPATIAL_GRID = false;
     public static final boolean SOUND_RANDOM_PITCH = true;
     public static final BulletType FORCE_BEGIN_CANNON = null;
