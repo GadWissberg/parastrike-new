@@ -29,7 +29,6 @@ hs_err_pid*
 /android/gen/
 /android/out/
 local.properties
-com_crashlytics_export_strings.xml
 
 ## Robovm:
 /ios/robovm-build/

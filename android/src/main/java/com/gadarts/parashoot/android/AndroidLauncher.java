@@ -2,7 +2,6 @@ package com.gadarts.parashoot.android;
 
 import android.os.Bundle;
 import android.os.Looper;
-import android.support.annotation.NonNull;
 import android.widget.Toast;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
@@ -28,7 +27,6 @@ public class AndroidLauncher extends AndroidApplication {
      *
      * @return The config object.
      */
-    @NonNull
     private AndroidApplicationConfiguration createAppConfig() {
         AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
         setAppUseConfig(config);

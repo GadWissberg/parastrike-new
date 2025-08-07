@@ -25,9 +25,9 @@ android {
   defaultConfig {
     applicationId 'com.gadarts.parashoot.android'
     minSdkVersion 19
-    targetSdkVersion 34
-    versionCode 15
-    versionName "1.1"
+    targetSdkVersion 35
+    versionCode 22
+    versionName "1.1.1"
     multiDexEnabled true
   }
   compileOptions {
@@ -63,9 +63,6 @@ dependencies {
   natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
   natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
   natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
-  implementation "com.android.support:appcompat-v7:27.1.1"
-  implementation "com.android.support:customtabs:27.1.1"
-  implementation "com.android.support:support-v4:27.1.1"
 }
 
 // Called every time gradle gets executed, takes the native dependencies of

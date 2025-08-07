@@ -15,11 +15,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.gadarts.parashoot.Parastrike;
 import com.gadarts.parashoot.model.object_factories.SideKickFactory;
-import com.gadarts.parashoot.utils.GameSettings;
 import com.gadarts.parashoot.utils.Rules;
 import com.gadarts.parashoot.weapons.BulletType;
-
-import java.util.HashMap;
 
 /**
  * Created by Gad on 29/09/2015.
@@ -31,11 +28,11 @@ public class TestMenuScreen implements Screen {
     private final Skin buttonSkin;
     private final BitmapFont textFont;
     private SpriteBatch batch = new SpriteBatch();
-    private Stage stage;
+    private final Stage stage;
     private int selectedWeaponIndex;
     private int selectedSideKickIndex;
-    private BulletType[] weaponsOrder = new BulletType[8];
-    private SideKickFactory.SideKickType[] sideKicksOrder = new SideKickFactory.SideKickType[8];
+    private final BulletType[] weaponsOrder = new BulletType[8];
+    private final SideKickFactory.SideKickType[] sideKicksOrder = new SideKickFactory.SideKickType[8];
     private int sideKickArmor = 1;
     private int sideKickShootingRate = 1;
     private int weaponShootingRate = 1;
@@ -138,28 +135,15 @@ public class TestMenuScreen implements Screen {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 main.actionResolver.StartSession();
-                HashMap<String, String> attributes = new HashMap<String, String>();
                 main.goToBattleTest(weaponsOrder[selectedWeaponIndex], sideKicksOrder[selectedSideKickIndex], sideKickArmor, sideKickShootingRate, sideKickStrength, weaponShootingRate, weaponStrength, enemyLevel, playerArmor, generator);
                 System.gc();
                 return true;
             }
         });
 
-        String signText;
-
-        if (GameSettings.ALLOW_BUG_REPORTING) {
-            TextButton crashButton = addButton(style, "Crashlytics Test", 660, 10);
-            crashButton.addListener(new InputListener() {
-                @Override
-                public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                    int i = 0 / 0;
-                    return true;
-                }
-            });
-        }
     }
 
-    private TextButton addButton(TextButton.TextButtonStyle style, String text, float x, float y) {
+    private TextButton addButton(TextButton.TextButtonStyle style, String text, float x, float  y) {
         TextButton button = new TextButton(text, style);
         button.setPosition(x, y);
         button.setHeight(150);
@@ -217,7 +201,7 @@ public class TestMenuScreen implements Screen {
                                                if (sideKickArmor > 1) {
                                                    sideKickArmor -= Rules.Cannons.UPGRADE_UNIT;
                                                } else {
-                                                   sideKickArmor = (int) Rules.Cannons.MAXIMUM_LEVEL;
+                                                   sideKickArmor = Rules.Cannons.MAXIMUM_LEVEL;
                                                }
                                            }
                                            break;
@@ -232,7 +216,7 @@ public class TestMenuScreen implements Screen {
                                                if (sideKickShootingRate > 1) {
                                                    sideKickShootingRate -= Rules.Cannons.UPGRADE_UNIT;
                                                } else {
-                                                   sideKickShootingRate = (int) Rules.Cannons.MAXIMUM_LEVEL;
+                                                   sideKickShootingRate = Rules.Cannons.MAXIMUM_LEVEL;
                                                }
                                            }
                                            break;
@@ -247,7 +231,7 @@ public class TestMenuScreen implements Screen {
                                                if (sideKickStrength > 1) {
                                                    sideKickStrength -= Rules.Cannons.UPGRADE_UNIT;
                                                } else {
-                                                   sideKickStrength = (int) Rules.Cannons.MAXIMUM_LEVEL;
+                                                   sideKickStrength = Rules.Cannons.MAXIMUM_LEVEL;
                                                }
                                            }
                                            break;
@@ -262,7 +246,7 @@ public class TestMenuScreen implements Screen {
                                                if (weaponShootingRate > 1) {
                                                    weaponShootingRate -= Rules.Cannons.UPGRADE_UNIT;
                                                } else {
-                                                   weaponShootingRate = (int) Rules.Cannons.MAXIMUM_LEVEL;
+                                                   weaponShootingRate = Rules.Cannons.MAXIMUM_LEVEL;
                                                }
                                            }
                                            break;
@@ -277,7 +261,7 @@ public class TestMenuScreen implements Screen {
                                                if (weaponStrength > 1) {
                                                    weaponStrength -= Rules.Cannons.UPGRADE_UNIT;
                                                } else {
-                                                   weaponStrength = (int) Rules.Cannons.MAXIMUM_LEVEL;
+                                                   weaponStrength = Rules.Cannons.MAXIMUM_LEVEL;
                                                }
                                            }
                                            break;

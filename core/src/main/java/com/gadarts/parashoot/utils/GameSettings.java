@@ -13,7 +13,6 @@ import com.gadarts.parashoot.weapons.BulletType;
 public class GameSettings {
     public static final boolean SHOW_AND_LOG_FPS = false;
     public static final boolean SEND_SCORE = false;
-    public static final boolean ALLOW_BUG_REPORTING = false;
     public static boolean SOUND_TOGGLE = true;
     public static final boolean SKIP_INTRO = false;
     public static final boolean ENEMY_TESTING = false;
