@@ -3,14 +3,12 @@ package com.gadarts.parashoot;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Preferences;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.profiling.GL20Interceptor;
 import com.badlogic.gdx.graphics.profiling.GLProfiler;
-import com.badlogic.gdx.utils.TimeUtils;
 import com.gadarts.parashoot.assets.AssetManagerWrapper;
 import com.gadarts.parashoot.level_model.LevelSkill;
 import com.gadarts.parashoot.model.ActionResolver;
-import com.gadarts.parashoot.model.GGSActionResolver;
 import com.gadarts.parashoot.model.MentorsFactory;
 import com.gadarts.parashoot.model.MentorsManager;
 import com.gadarts.parashoot.model.PlayerStats;
@@ -31,7 +29,6 @@ import com.gadarts.parashoot.screens.Menus.WelcomeScreen;
 import com.gadarts.parashoot.screens.TestMenuScreen;
 import com.gadarts.parashoot.screens.WarScreen;
 import com.gadarts.parashoot.utils.GameSettings;
-import com.gadarts.parashoot.utils.Rules;
 import com.gadarts.parashoot.weapons.BulletType;
 
 import java.util.HashMap;
@@ -39,7 +36,9 @@ import java.util.HashMap;
 import static com.gadarts.parashoot.assets.Assets.Configs.Preferences.Settings.PREF_SETTINGS;
 import static com.gadarts.parashoot.assets.Assets.Configs.Preferences.Settings.SOUND;
 
-/** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
+/**
+ * {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms.
+ */
 public class Parastrike extends Game implements ApplicationListener {
     private static final int GL_LOG_INTERVAL = 1000;
     private static PlayerStatsHandler playerStatsHandler;
@@ -71,7 +70,7 @@ public class Parastrike extends Game implements ApplicationListener {
         assetsManager.getLogger().setLevel(GameSettings.ASSET_MANAGER_DEBUG_LEVEL);
         soundPlayer = new SoundPlayer();
         GameSettings.SOUND_TOGGLE = GameSettings.SOUND_TOGGLE && Gdx.app.getPreferences(PREF_SETTINGS).getBoolean(SOUND, true);
-        Gdx.input.setCatchBackKey(true);
+        Gdx.input.setCatchKey(Input.Keys.BACK, true);
         if (GameSettings.TEST_MENU_ACTIVE) {
             goToTestMenu();
         } else {
